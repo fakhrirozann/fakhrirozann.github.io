@@ -598,17 +598,6 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
 document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
 
-  // Check if the Fullscreen API is supported by the browser
-  if (body.requestFullscreen) {
-    // Use the Fullscreen API to make the body go fullscreen
-    body.requestFullscreen()
-      .then(() => {
-        console.log('Page is now in fullscreen mode');
-      })
-      .catch((err) => {
-        console.error('Error attempting to enable full-screen mode: ', err);
-      });
-  }
 });
     </script>	
   </body>
