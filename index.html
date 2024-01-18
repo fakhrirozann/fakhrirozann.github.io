@@ -373,7 +373,7 @@
             
             main > article {
               grid-template-rows: 1fr repeat(4, 0.5fr);
-              height: max(700px, 100%);
+              height: 100%;
             }
             
             main > article > .article-title-section {
@@ -479,7 +479,7 @@
     </main>
     <script>
 
-        function workhome() {window.open("https://fakhrirozann.github.io/work");}
+        function workhome() {window.locatio.replace("https://fakhrirozann.github.io/work");}
 
         let activeIndex = 0;
         /* -- Mobile Nav Toggle -- */
@@ -530,12 +530,6 @@
           }
           
         }
-        
-        $( document.querySelectorAll( '.tooltip' ) ).on({ 
-          mouseenter: onHoverToggleTooltip, 
-          mouseleave: onHoverToggleTooltip, 
-          mousemove: onHoverToggleTooltip
-        });
           
         });
     </script>
