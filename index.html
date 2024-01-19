@@ -79,7 +79,7 @@
             background-color: transparent;
             border: none;
             border-left: 1px solid var(--border-color);
-            color: white;
+            color: rgb(0, 0, 0);
             cursor: pointer;
             display: none;
             gap: 0.8rem;
@@ -187,8 +187,9 @@
             border-bottom: 1px solid var(--border-color);
           }
 
+          /*sc: UMOCA .gif shop*/
           main > article:first-child > .article-image-section {
-            background-image: url("https://i.gifer.com/1VIy.gif");
+            background-image: url("https://utahmoca.org/wp-content/uploads/2021/10/ello-optimized-49cfab4b.gif");
           }
 
           main > article > .article-image-section {
@@ -336,7 +337,7 @@
             }
             
             #nav-logo-section > a > i {
-              font-size: 1.5rem;
+              font-size: 1.2rem;
               margin-left: 1rem;
             }
             
@@ -423,13 +424,15 @@
           }
 
           /* sticky tooltip */
+          /* logo */
 
           </style>
 </head>
 <body>
     <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
-        <img src="favicon.ico"  href="https://fakhrirozann.github.io" >
+        <a href="https://fakhrirozann.github.io" id="h2">
+        <img src="favicon.ico" width="30px" height="auto"></a>
         </div>
         <div id="nav-mobile-section">
         <div id="nav-link-section" class="nav-section">
@@ -505,32 +508,7 @@
 
         $( function() {
          
-        // tooltip
-        function onHoverToggleTooltip( e ) {
-          var 	$this	= $( this ),
-            title	= $this.attr( 'title' ),
-            type	= e.type,
-            offset 	= $this.offset(),
-            xOffset = e.pageX - offset.left + 10,
-            yOffset = e.pageY - offset.top + 30;
-            
-          if( type == 'mouseenter' ) {
-            $this.data( 'tipText', title ).removeAttr( 'title' );
-            $this.append( '<span class="title">' + title + '</span>' ).hide().fadeIn(250);
-            $this.find ( '.title' )
-              .css( 'top', ( yOffset ) + 'px' )
-              .css( 'left', ( xOffset ) + 'px' );
-          } else if ( type == 'mouseleave' ) {
-            $this.attr( 'title', $this.data( 'tipText' ) );
-            $this.find ( '.title' ).fadeOut().remove();
-          } else if ( type == 'mousemove' ) {
-            $this.find ( '.title' )
-              .css( 'top', ( yOffset ) + 'px' )
-              .css( 'left', ( xOffset ) + 'px' );
-          }
-          
-        }
-          
+
         });
     </script>
 </body>
