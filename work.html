@@ -32,16 +32,21 @@
           * {
             box-sizing: border-box;
           }
+          
+          h2{
+            font-weight: 600;
+          }
 
-          h1, h2, h3, a, p, span {
+          h1, h3, a, p, span {
             font-family: "Rubik", sans-serif;
-            font-weight: 400;
             color: rgb(14, 14, 14);
             margin: 0px;
           }
+          
           p {
             color: rgb(14, 14, 14);
           }
+          
           a {
             text-decoration: none;
           }
@@ -113,7 +118,7 @@
           }
 
           #nav-logo-section > a > i {
-            font-size: 2.5rem;
+            font-size: 2rem;
           }
 
           #nav-link-section {
@@ -131,7 +136,7 @@
             overflow: hidden;
           }
 
-          main > article {
+          main > project {
             height: 100%;
             width: 100%;
             display: grid;
@@ -140,99 +145,99 @@
             position: absolute;
             left: 0px;
             top: 0px;
-            transition: transform 400ms ease;  
+            transition: transform 600ms ease;  
           }
 
-          main > article[data-status="inactive"] {
+          main > project[data-status="inactive"] {
             transform: translateX(-100%);
             transition: none;
           }
 
-          main > article[data-status="active"] {
+          main > project[data-status="active"] {
             transform: translateX(0%);
           }
 
-          main > article[data-status="before"] {
+          main > project[data-status="before"] {
             transform: translateX(-100%);
           }
 
-          main > article[data-status="after"] {
+          main > project[data-status="after"] {
             transform: translateX(100%);
           }
 
-          main > article[data-status="becoming-active-from-before"] {
+          main > project[data-status="becoming-active-from-before"] {
             transform: translateX(-100%);
             transition: none;
           }
 
-          main > article[data-status="becoming-active-from-after"] {
+          main > project[data-status="becoming-active-from-after"] {
             transform: translateX(100%);
             transition: none;
           }
 
-          main > article > .article-section {
+          main > project > .project-section {
             height: 100%;
             display: flex;
           }
 
-          main > article > .article-description-section,
-          main > article > .article-nav-section {
+          main > project > .project-description-section,
+          main > project > .project-nav-section {
             border-left: 1px solid var(--border-color);
           }
 
-          main > article > .article-title-section,
-          main > article > .article-nav-section {
+          main > project > .project-title-section,
+          main > project > .project-nav-section {
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
           }
 
-          main > article:first-child > .article-image-section {
+          main > project:first-child > .project-image-section {
             background-image: url("https://images.unsplash.com/photo-1628270680011-41792b21de87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80auto=format&fit=crop&w=1932&q=80&auto=format&fit=crop&w=1035&q=80");
           }
 
-          main > article:nth-child(2) > .article-image-section {
+          main > project:nth-child(2) > .project-image-section {
             background-image: url("https://images.unsplash.com/photo-1663344010224-a89a22f14bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=2574&q=80");
           }
 
-          main > article:nth-child(3) > .article-image-section {
+          main > project:nth-child(3) > .project-image-section {
             background-image: url("https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80");
           }
 
-          main > article:nth-child(4) > .article-image-section {
+          main > project:nth-child(4) > .project-image-section {
             background-image: url("https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80");
           }
 
-          main > article > .article-image-section {
+          main > project > .project-image-section {
             background-position: center;
             background-size: cover;
           }
 
-          main > article > .article-description-section {
+          main > project > .project-description-section {
             flex-direction: column;
             justify-content: flex-end;
             padding: 4rem; 
           }
 
-          main > article > .article-description-section > p {
+          main > project > .project-description-section > p {
             color: rgb(14, 14, 14);
             font-size: 1.25em;
           }
 
-          main > article > .article-description-section > p  > a:hover {
+          main > project > .project-description-section > p  > a:hover {
             text-decoration: underline;
           }
 
-          main > article > .article-title-section {
+          main > project > .project-title-section {
             align-items: center; 
             justify-content: space-between;
             padding: 2rem 4rem;
           }
 
-          main > article > .article-title-section * {
+          main > project > .project-title-section * {
             color: rgb(26, 26, 26);
           }
 
-          main > article > .article-title-section > h2 {
+          main > project > .project-title-section > h2 {
             flex-basis: 50%;
             font-family: "Montserrat", sans-serif;
             font-size: 3.5rem;
@@ -241,12 +246,12 @@
             text-transform: uppercase;
           }
 
-          main > article > .article-title-section > i {
+          main > project > .project-title-section > i {
             color: rgba(37, 37, 37, 0.75);
             font-size:  4rem;
           }
 
-          main > article > .article-nav-section > .article-nav-button {
+          main > project > .project-nav-section > .project-nav-button {
             touch-action: manipulation;
             background-color: transparent;
             flex-grow: 1;
@@ -258,13 +263,13 @@
             transition: 1s;
           }
 
-          main > article > .article-nav-section > .article-nav-button:hover {
+          main > project > .project-nav-section > .project-nav-button:hover {
             touch-action: manipulation;
             background-color: rgba(116, 116, 116, 0.397);
             transition: 0.8s;
           }
 
-          main > article > .article-nav-section > .article-nav-button:nth-child(2) {
+          main > project > .project-nav-section > .project-nav-button:nth-child(2) {
             touch-action: manipulation;
             border-left: 0.8px solid var(--border-color);
           }
@@ -287,41 +292,41 @@
               overflow-y: auto;
             }
             
-            main > article {
+            main > project {
               grid-template-columns: none;
               grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
               height: max(900px, 100%);
             }
             
-            main > article > .article-title-section > h2 {
+            main > project > .project-title-section > h2 {
               font-size: 3rem; 
               line-height: 2.6rem;
             }
             
-            main > article > .article-title-section > i {
+            main > project > .project-title-section > i {
               font-size: 3rem; 
             }
             
-            main > article > .article-description-section,
-            main > article > .article-nav-section {
+            main > project > .project-description-section,
+            main > project > .project-nav-section {
               border-left: none;
             }
 
-            main > article > .article-image-section {
+            main > project > .project-image-section {
               order: 1;
             }
             
-            main > article > .article-title-section {
+            main > project > .project-title-section {
               border-bottom: 1px solid var(--border-color);
               order: 2;
             }
             
-            main > article > .article-description-section {
+            main > project > .project-description-section {
               justify-content: center;
               order: 3;
             }
             
-            main > article > .article-nav-section {
+            main > project > .project-nav-section {
               touch-action: manipulation;
               border-bottom: 1px solid var(--border-color);
               order: 4;
@@ -387,30 +392,30 @@
               padding-bottom: 4rem;
             }
             
-            main > article {
+            main > project {
               grid-template-rows: 1fr repeat(4, 0.5fr);
               height: max(700px, 100%);
             }
             
-            main > article > .article-title-section {
+            main > project > .project-title-section {
               padding: 2rem;
             }
             
-            main > article > .article-title-section > h2 {
+            main > project > .project-title-section > h2 {
               flex-basis: 70%;
               font-size: 1.75em; 
               line-height: 1.5rem;
             }
             
-            main > article > .article-title-section > i {
+            main > project > .project-title-section > i {
               font-size: 2rem; 
             }
             
-            main > article > .article-description-section {
+            main > project > .project-description-section {
               padding: 2rem;
             }
             
-            main > article > .article-description-section > p {
+            main > project > .project-description-section > p {
               font-size: 1rem;
 
             }
@@ -418,13 +423,13 @@
 
           /* -- YT link / Source link styles -- */
 
-          main > article > .article-description-section > p  > .source-link {
+          main > project > .project-description-section > p  > .source-link {
             color: var(--highlight-color);
             display: inline;
           }
 
-          main > article .yt-link,
-          main > article .yt-link > i {
+          main > project .yt-link,
+          main > project .yt-link > i {
             color: var(--yt-color);
             display: inline;
           }
@@ -472,90 +477,90 @@
   </nav>
 
   <main>
-      <article data-index="0" data-status="active">
-        <div class="article-image-section article-section"></div>
-        <div class="article-description-section article-section">
+      <project data-index="0" data-status="active">
+        <div class="project-image-section project-section"></div>
+        <div class="project-description-section project-section">
           <p>
             Skyscraper roofline against a pale blue sky in Boston, MA, USA.
           </p>
         </div>
-        <div class="article-title-section article-section">
+        <div class="project-title-section project-section">
           <h2>FUJIFILM, X-T20</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="article-nav-section article-section">
-          <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="project-nav-section project-section">
+          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <button class="project-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>          
           </button>
         </div>
-      </article>
+      </project>
       
-      <article data-index="1" data-status="inactive">    
-        <div class="article-image-section article-section"></div>
-        <div class="article-description-section article-section">
+      <project data-index="1" data-status="inactive">    
+        <div class="project-image-section project-section"></div>
+        <div class="project-description-section project-section">
           <p>The afternoon rays illuminate a group of clouds as the sun approaches the horizon.</p>
         </div>
-        <div class="article-title-section article-section">
+        <div class="project-title-section project-section">
             <h2>SONY, ILCE-6000</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="article-nav-section article-section">
-          <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="project-nav-section project-section">
+          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <button class="project-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
         </div>
-      </article>
+      </project>
       
-      <article data-index="2" data-status="inactive">    
-        <div class="article-image-section article-section"></div>
-        <div class="article-description-section article-section">
+      <project data-index="2" data-status="inactive">    
+        <div class="project-image-section project-section"></div>
+        <div class="project-description-section project-section">
           <p>Mulher no horizonte, em cima de uma das dunas dos Lençóis Maranhenses.</p>
         </div>
-        <div class="article-title-section article-section">
+        <div class="project-title-section project-section">
           <h2>Canon, EOS REBEL T3i</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="article-nav-section article-section">
-          <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="project-nav-section project-section">
+          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <button class="project-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>          
           </button>
         </div>
-      </article>
+      </project>
       
-      <article data-index="3" data-status="inactive">    
-        <div class="article-image-section article-section"></div>
-        <div class="article-description-section article-section">
+      <project data-index="3" data-status="inactive">    
+        <div class="project-image-section project-section"></div>
+        <div class="project-description-section project-section">
           <p>
             Sandstone plateau, Hisma Desert – NEOM, Saudi Arabia.</p>
         </div>
-        <div class="article-title-section article-section">
+        <div class="project-title-section project-section">
           <h2>Hasselblad, L2D-20c</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="article-nav-section article-section">
-          <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="project-nav-section project-section">
+          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <button class="project-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
         </div>
-      </article>
+      </project>
     <script>
         /* -- Carousel Navigation -- */
 
 let activeIndex = 0;
 
-const slides = document.getElementsByTagName("article");
+const slides = document.getElementsByTagName("project");
 
 const handleLeftClick = () => {
   const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
