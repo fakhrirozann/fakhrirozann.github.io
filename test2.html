@@ -26,7 +26,9 @@
 }
 
 body {
+    justify-self: center;
     border: 1px solid #000000;
+    max-width: 1700PX;
     margin-inline: 15dvh;
     margin-block: 6dvh;
 }
@@ -40,7 +42,7 @@ a {
 }
 
 section {
-    padding-top: 20dvh;
+    padding-top: 16dvh;
     justify-content: center;
     align-content: center;
 }
@@ -48,14 +50,14 @@ section {
 
 .title { 
     text-align: center; 
-    font-size: 8rem; 
+    font-size: 12dvh; 
     font-family: "Limelight"; 
 }
 
 .subtitle {
     padding-bottom: 8dvh; 
     text-align: center; 
-    font-size: 5.5rem; 
+    font-size: 8dvh; 
     font-family: "Limelight";
     color: transparent; 
     font-weight: 500;  
@@ -101,7 +103,15 @@ section {
 
 }
 
-.item:after { /* ADDED */
+@media (min-width: 600px) {
+  .items { grid-template-columns: repeat(2, 1fr);
+    }  
+}
+
+@media (min-width: 1200px) {
+  .items { grid-template-columns: repeat(4, 1fr);
+    }  
+    .item:after { /* ADDED */
   content: '';
   position: absolute;
   top: -1dvh;
@@ -113,26 +123,24 @@ section {
 .item:last-child:after { /* ADDED */
   display: none; /* Hide the divider for the last block */
 }
-
-@media (min-width: 600px) {
-  .items { grid-template-columns: repeat(2, 1fr);
-    }  
-}
-
-@media (min-width: 1200px) {
-  .items { grid-template-columns: repeat(4, 1fr);
-    }  
 } 
 
+@media (max-width: 1480px) {
+  body {
+    border: 1px solid #000000;
+    margin-inline: 2dvh;
+    margin-block: 2dvh;
+} 
+} 
 
 </style>
 <body>
     <section>
         <div class="title">
-            VECRA
+            FAKHRI
         </div>
         <div class="subtitle">
-            DESIGN STUDIO 
+            PRODUCT DESGINER 
         </div>
         <div class="section-header">
             Featured Works
