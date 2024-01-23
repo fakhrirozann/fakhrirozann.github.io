@@ -1,0 +1,200 @@
+<html>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&display=swap" rel="stylesheet">
+<head>
+
+<style>
+
+:root {
+    --background-color: #FFC000;
+    --border-color: #e7e6e6;
+    --highlight-color: rgb(0, 0, 0);
+
+    cursor: crosshair ;
+}
+
+* {
+    box-sizing: border-box;
+}
+    
+a {
+    font-family: 'Poiret One', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+a.logo {
+    font-family: 'limelight', sans-serif;
+    font-size: 3rem;
+}
+
+body {
+    
+    background-color: #ffffff;
+
+    border-color: var(--border-color);
+
+    overflow: hidden;
+}
+
+nav {
+    background-color: #FFC000;
+    display: flex;
+    width: 1fr;
+    height: 12.5dvh;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav .nav-section {
+
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-mobile-section {
+    display: flex;
+    flex-grow: 6;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#nav-logo-section {
+    display: flex;
+    flex: 1;
+}
+
+#nav-link-section {
+    display: flex;
+    flex: 6;
+    border-left: 1px solid var(--border-color);
+}
+
+#nav-contact-section {
+    display: flex;
+    flex: 2;
+    border-left: 1px solid var(--border-color);
+}
+
+
+.grid-container {
+    display: grid;
+    height: 87.5dvh;
+    margin-bottom: 0.5dvh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5dvh;
+    text-align: center;
+}
+
+.grid-container > div {
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.item01 {
+    height: 75dvh;
+    width: calc(100%/9);
+    text-orientation:upright;
+    writing-mode: vertical-lr;
+}
+
+.item02 {
+  grid-area: 1 / 2 / 7 / 8;
+}
+
+.item03 {
+  grid-area:  1 / 8 / 7 / 10;
+  background-image: url("https://utahmoca.org/wp-content/uploads/2021/10/ello-optimized-49cfab4b.gif");
+  background-position: center;
+}
+
+.item04 {
+  grid-area:auto;
+}
+
+.item05 {
+  grid-area:  7 / 2 / 9 / 8;
+}
+
+.item06 {
+  grid-area:  7 / 8 / 9 / 10;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+    <nav data-toggled="false" data-transitionable="false">
+        
+        <div id="nav-logo-section" class="nav-section">
+            <a class="logo">FRN</a>
+        </div>
+
+        <div id="nav-mobile-section">
+            
+            <div id="nav-link-section" class="nav-section">
+                <a  href="https://fakhrirozann.github.io/about">Who? </a>
+                <a href="https://fakhrirozann.github.io/work">What?</a>
+            </div>
+
+            <div id="nav-contact-section" class="nav-section">
+                <a href="https://www.linkedin.com/in/fakhrirozann">Say Hello</a>
+            </div>
+
+        </div>
+        
+    </nav>
+
+    <div class="grid-container">
+        
+        <div id="item01">
+            <a class="logo" aria-hidden="true">SOUND ON</a>
+        </div>
+        
+        <div class="item02" style="font-family: limelight;">
+            <h1>
+                VECRA
+            </h1>
+            <h2 style="color: transparent;   -webkit-text-stroke-width: 0.05rem; -webkit-text-stroke-color: black;">
+                DESIGN STUDIO
+            </h2>
+        </div>
+        
+        <div class="item03">
+            
+        </div>
+        
+        <div id="item04">
+            <i class="fa fa-music "></i>
+        </div>
+        
+        <div class="item05">
+            <a>FKHRZNN NY</a>
+        </div>
+        
+        <div class="item06">
+            <i class="fa fa-compass" aria-hidden="true"> WORK</i>
+        </div>
+        
+
+    </div>
+    
+    <script>
+
+    </script>
+</body>
+
+<html>

@@ -136,7 +136,7 @@
             overflow: hidden;
           }
 
-          main > project {
+          main > slides {
             height: 100%;
             width: 100%;
             display: grid;
@@ -148,96 +148,96 @@
             transition: transform 600ms ease;  
           }
 
-          main > project[data-status="inactive"] {
+          main > slides[data-status="inactive"] {
             transform: translateX(-100%);
             transition: none;
           }
 
-          main > project[data-status="active"] {
+          main > slides[data-status="active"] {
             transform: translateX(0%);
           }
 
-          main > project[data-status="before"] {
+          main > slides[data-status="before"] {
             transform: translateX(-100%);
           }
 
-          main > project[data-status="after"] {
+          main > slides[data-status="after"] {
             transform: translateX(100%);
           }
 
-          main > project[data-status="becoming-active-from-before"] {
+          main > slides[data-status="becoming-active-from-before"] {
             transform: translateX(-100%);
             transition: none;
           }
 
-          main > project[data-status="becoming-active-from-after"] {
+          main > slides[data-status="becoming-active-from-after"] {
             transform: translateX(100%);
             transition: none;
           }
 
-          main > project > .project-section {
+          main > slides > .slides-section {
             height: 100%;
             display: flex;
           }
 
-          main > project > .project-description-section,
-          main > project > .project-nav-section {
+          main > slides > .slides-description-section,
+          main > slides > .slides-nav-section {
             border-left: 1px solid var(--border-color);
           }
 
-          main > project > .project-title-section,
-          main > project > .project-nav-section {
+          main > slides > .slides-title-section,
+          main > slides > .slides-nav-section {
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
           }
 
-          main > project:first-child > .project-image-section {
+          main > slides:first-child > .slides-image-section {
             background-image: url("https://images.unsplash.com/photo-1628270680011-41792b21de87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80auto=format&fit=crop&w=1932&q=80&auto=format&fit=crop&w=1035&q=80");
           }
 
-          main > project:nth-child(2) > .project-image-section {
+          main > slides:nth-child(2) > .slides-image-section {
             background-image: url("https://images.unsplash.com/photo-1663344010224-a89a22f14bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=2574&q=80");
           }
 
-          main > project:nth-child(3) > .project-image-section {
+          main > slides:nth-child(3) > .slides-image-section {
             background-image: url("https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80");
           }
 
-          main > project:nth-child(4) > .project-image-section {
+          main > slides:nth-child(4) > .slides-image-section {
             background-image: url("https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80");
           }
 
-          main > project > .project-image-section {
+          main > slides > .slides-image-section {
             background-position: center;
             background-size: cover;
           }
 
-          main > project > .project-description-section {
+          main > slides > .slides-description-section {
             flex-direction: column;
             justify-content: flex-end;
             padding: 4rem; 
           }
 
-          main > project > .project-description-section > p {
+          main > slides > .slides-description-section > p {
             color: rgb(14, 14, 14);
             font-size: 1.25em;
           }
 
-          main > project > .project-description-section > p  > a:hover {
+          main > slides > .slides-description-section > p  > a:hover {
             text-decoration: underline;
           }
 
-          main > project > .project-title-section {
+          main > slides > .slides-title-section {
             align-items: center; 
             justify-content: space-between;
             padding: 2rem 4rem;
           }
 
-          main > project > .project-title-section * {
+          main > slides > .slides-title-section * {
             color: rgb(26, 26, 26);
           }
 
-          main > project > .project-title-section > h2 {
+          main > slides > .slides-title-section > h2 {
             flex-basis: 50%;
             font-family: "Montserrat", sans-serif;
             font-size: 3.5rem;
@@ -246,12 +246,12 @@
             text-transform: uppercase;
           }
 
-          main > project > .project-title-section > i {
+          main > slides > .slides-title-section > i {
             color: rgba(37, 37, 37, 0.75);
             font-size:  4rem;
           }
 
-          main > project > .project-nav-section > .project-nav-button {
+          main > slides > .slides-nav-section > .slides-nav-button {
             touch-action: manipulation;
             background-color: transparent;
             flex-grow: 1;
@@ -263,13 +263,13 @@
             transition: 1s;
           }
 
-          main > project > .project-nav-section > .project-nav-button:hover {
+          main > slides > .slides-nav-section > .slides-nav-button:hover {
             touch-action: manipulation;
             background-color: rgba(116, 116, 116, 0.397);
             transition: 0.8s;
           }
 
-          main > project > .project-nav-section > .project-nav-button:nth-child(2) {
+          main > slides > .slides-nav-section > .slides-nav-button:nth-child(2) {
             touch-action: manipulation;
             border-left: 0.8px solid var(--border-color);
           }
@@ -292,41 +292,41 @@
               overflow-y: auto;
             }
             
-            main > project {
+            main > slides {
               grid-template-columns: none;
               grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
               height: max(900px, 100%);
             }
             
-            main > project > .project-title-section > h2 {
+            main > slides > .slides-title-section > h2 {
               font-size: 3rem; 
               line-height: 2.6rem;
             }
             
-            main > project > .project-title-section > i {
+            main > slides > .slides-title-section > i {
               font-size: 3rem; 
             }
             
-            main > project > .project-description-section,
-            main > project > .project-nav-section {
+            main > slides > .slides-description-section,
+            main > slides > .slides-nav-section {
               border-left: none;
             }
 
-            main > project > .project-image-section {
+            main > slides > .slides-image-section {
               order: 1;
             }
             
-            main > project > .project-title-section {
+            main > slides > .slides-title-section {
               border-bottom: 1px solid var(--border-color);
               order: 2;
             }
             
-            main > project > .project-description-section {
+            main > slides > .slides-description-section {
               justify-content: center;
               order: 3;
             }
             
-            main > project > .project-nav-section {
+            main > slides > .slides-nav-section {
               touch-action: manipulation;
               border-bottom: 1px solid var(--border-color);
               order: 4;
@@ -392,30 +392,30 @@
               padding-bottom: 4rem;
             }
             
-            main > project {
+            main > slides {
               grid-template-rows: 1fr repeat(4, 0.5fr);
               height: max(700px, 100%);
             }
             
-            main > project > .project-title-section {
+            main > slides > .slides-title-section {
               padding: 2rem;
             }
             
-            main > project > .project-title-section > h2 {
+            main > slides > .slides-title-section > h2 {
               flex-basis: 70%;
               font-size: 1.75em; 
               line-height: 1.5rem;
             }
             
-            main > project > .project-title-section > i {
+            main > slides > .slides-title-section > i {
               font-size: 2rem; 
             }
             
-            main > project > .project-description-section {
+            main > slides > .slides-description-section {
               padding: 2rem;
             }
             
-            main > project > .project-description-section > p {
+            main > slides > .slides-description-section > p {
               font-size: 1rem;
 
             }
@@ -423,13 +423,13 @@
 
           /* -- YT link / Source link styles -- */
 
-          main > project > .project-description-section > p  > .source-link {
+          main > slides > .slides-description-section > p  > .source-link {
             color: var(--highlight-color);
             display: inline;
           }
 
-          main > project .yt-link,
-          main > project .yt-link > i {
+          main > slides .yt-link,
+          main > slides .yt-link > i {
             color: var(--yt-color);
             display: inline;
           }
@@ -477,90 +477,90 @@
   </nav>
 
   <main>
-      <project data-index="0" data-status="active">
-        <div class="project-image-section project-section"></div>
-        <div class="project-description-section project-section">
+      <slides data-index="0" data-status="active">
+        <div class="slides-image-section slides-section"></div>
+        <div class="slides-description-section slides-section">
           <p>
             Skyscraper roofline against a pale blue sky in Boston, MA, USA.
           </p>
         </div>
-        <div class="project-title-section project-section">
+        <div class="slides-title-section slides-section">
           <h2>FUJIFILM, X-T20</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="project-nav-section project-section">
-          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="slides-nav-section slides-section">
+          <button class="slides-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="project-nav-button" type="button" onclick="handleRightClick()">
+          <button class="slides-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>          
           </button>
         </div>
-      </project>
+      </slides>
       
-      <project data-index="1" data-status="inactive">    
-        <div class="project-image-section project-section"></div>
-        <div class="project-description-section project-section">
+      <slides data-index="1" data-status="inactive">    
+        <div class="slides-image-section slides-section"></div>
+        <div class="slides-description-section slides-section">
           <p>The afternoon rays illuminate a group of clouds as the sun approaches the horizon.</p>
         </div>
-        <div class="project-title-section project-section">
+        <div class="slides-title-section slides-section">
             <h2>SONY, ILCE-6000</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="project-nav-section project-section">
-          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="slides-nav-section slides-section">
+          <button class="slides-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="project-nav-button" type="button" onclick="handleRightClick()">
+          <button class="slides-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
         </div>
-      </project>
+      </slides>
       
-      <project data-index="2" data-status="inactive">    
-        <div class="project-image-section project-section"></div>
-        <div class="project-description-section project-section">
+      <slides data-index="2" data-status="inactive">    
+        <div class="slides-image-section slides-section"></div>
+        <div class="slides-description-section slides-section">
           <p>Mulher no horizonte, em cima de uma das dunas dos Lençóis Maranhenses.</p>
         </div>
-        <div class="project-title-section project-section">
+        <div class="slides-title-section slides-section">
           <h2>Canon, EOS REBEL T3i</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="project-nav-section project-section">
-          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="slides-nav-section slides-section">
+          <button class="slides-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="project-nav-button" type="button" onclick="handleRightClick()">
+          <button class="slides-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>          
           </button>
         </div>
-      </project>
+      </slides>
       
-      <project data-index="3" data-status="inactive">    
-        <div class="project-image-section project-section"></div>
-        <div class="project-description-section project-section">
+      <slides data-index="3" data-status="inactive">    
+        <div class="slides-image-section slides-section"></div>
+        <div class="slides-description-section slides-section">
           <p>
             Sandstone plateau, Hisma Desert – NEOM, Saudi Arabia.</p>
         </div>
-        <div class="project-title-section project-section">
+        <div class="slides-title-section slides-section">
           <h2>Hasselblad, L2D-20c</h2>
           <i class="fa-light fa-plus-large"></i>
         </div>
-        <div class="project-nav-section project-section">
-          <button class="project-nav-button" type="button" onclick="handleLeftClick()">
+        <div class="slides-nav-section slides-section">
+          <button class="slides-nav-button" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="project-nav-button" type="button" onclick="handleRightClick()">
+          <button class="slides-nav-button" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
         </div>
-      </project>
+      </slides>
     <script>
         /* -- Carousel Navigation -- */
 
 let activeIndex = 0;
 
-const slides = document.getElementsByTagName("project");
+const slides = document.getElementsByTagName("slides");
 
 const handleLeftClick = () => {
   const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
