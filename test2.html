@@ -3,171 +3,103 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
-    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="theme-color" content="#your_color_code_here"> <!-- Replace with your desired color code -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.scss">
+    <title>VECRA DESIGN COMPANY</title>
 <head>
-
-<style>
-
-:root {
-    --background-color: #FFC000;
-    --border-color: #e7e6e6;
-    --highlight-color: rgb(0, 0, 0);
-
-    cursor: crosshair ;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    justify-self: center;
-    border: 1px solid #000000;
-    max-width: 1700PX;
-    margin-inline: 15dvh;
-    margin-block: 6dvh;
-}
-
-h1
-a {
-    font-family: 'Poiret One', sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    color: black;
-}
-
-section {
-    padding-top: 16dvh;
-    justify-content: center;
-    align-content: center;
-}
-
-
-.title { 
-    text-align: center; 
-    font-size: 12vh; 
-    font-family: "Limelight"; 
-}
-
-.subtitle {
-    padding-bottom: 8dvh; 
-    text-align: center; 
-    font-size: 8vh; 
-    font-family: "Limelight";
-    color: transparent; 
-    font-weight: 500;  
-    -webkit-text-stroke-width: 0.08rem; 
-    -webkit-text-stroke-color: black;
-}
-
-.section-header {
-    padding-top:5dvh;
-    text-align: center; 
-    color: black; 
-    font-size: 3vh; 
-    font-family: "Poiret One"; 
-}
-
-.container {
-    display: grid;
-    width: 100%;
-    padding-inline: 10px;
-}
-
-.items{
-    display: grid;
-    grid-template-columns: 1fr; /* CHANGED */
-    font-family: "Poiret One";
-    font-size: 2.5vh;
-    font-weight: 600;
-    padding-top: 8dvh ;
-    padding-bottom: 4dvh;
-    grid-gap: 20px;
-}
-
-.item {
-    background-color: #eeeeee00;
-    padding: 4dvh;
-    position: relative; /* ADDED */
-    text-align: center;
-    align-items: center ;
-}
-
-.item:hover {
-    background-color: #9c2d2df6;
-
-}
-
-@media (min-width: 600px) {
-  .items { grid-template-columns: repeat(2, 1fr);
-    }  
-}
-
-@media (min-width: 1200px) {
-  .items { grid-template-columns: repeat(4, 1fr);
-    }  
-    .item:after { /* ADDED */
-  content: '';
-  position: absolute;
-  top: 0.6dvh;
-  border-left: 1px solid rgb(0, 0, 0);
-  right: -10px;
-  height: 10dvh; /* adjust this */
-}
-
-.item:last-child:after { /* ADDED */
-  display: none; /* Hide the divider for the last block */
-}
-} 
-
-@media (max-width: 1480px) {
-  body {
-    border: 1px solid #000000;
-    margin-inline: 2dvh;
-    margin-block: 2dvh;
-} 
-} 
-
-</style>
 <body>
-    <section>
-        <div class="title">
-            FAKHRI
-        </div>
-        <div class="subtitle">
-            PRODUCT DESGINER 
-        </div>
-        <div class="section-header">
-            Featured Works
-        </div>
-        <div class="container">
-            <div class="items">
-                <div class="item">
-                    FKHRZNN LA
-                </div>
-                <div class="item">
-                    PATEBA STUDIO
-                </div>
-                <div class="item">
-                    VECRA DS
-                </div>
-                <div class="item" >
-                    IIDSAA AWARD
+    <div class="frame">
+        <section>
+            <div class="title">
+                VECRA
+            </div>
+            <div class="subtitle">
+            +++{[ DESIGN STUDIO ]}+++
+            </div>
+            <div class="section-header">
+                Featured Works
+            </div>
+            <div class="container">
+                <div class="items">
+                    <div class="item">
+                        FKHRZNN LA
+                    </div>
+                    <div class="item">
+                        PATEBA STUDIO
+                    </div>
+                    <div class="item">
+                        VECRA DS
+                    </div>
+                    <div class="item" >
+                        IIDSAA AWARD
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- <div style="width: 103px; height: 0px; left: 513px; top: 776px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
-        <div style="width: 103px; height: 0px; left: 960px; top: 776px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
-        <div style="width: 103px; height: 0px; left: 1407px; top: 776px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
-        <div style="width: 33px; height: 56px; left: 944px; top: 963px; position: absolute; background: rgba(217, 217, 217, 0); border-radius: 32.50px; border: 1px black solid"></div>
-        <div style="width: 16.50px; height: 0px; left: 960.50px; top: 974.50px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
-        <img style="width: 54px; height: 54px; left: 43px; top: 40px; position: absolute" src="https://via.placeholder.com/54x54" /> -->
         </section>
+        <section>
+            <div class="title">
+                VECRA
+            </div>
+            <div class="subtitle">
+            +++{[ DESIGN STUDIO ]}+++
+            </div>
+            <div class="section-header">
+                Featured Works
+            </div>
+            <div class="container">
+                <div class="items">
+                    <div class="item">
+                        FKHRZNN LA
+                    </div>
+                    <div class="item">
+                        PATEBA STUDIO
+                    </div>
+                    <div class="item">
+                        VECRA DS
+                    </div>
+                    <div class="item" >
+                        IIDSAA AWARD
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="title">
+                VECRA
+            </div>
+            <div class="subtitle">
+            +++{[ DESIGN STUDIO ]}+++
+            </div>
+            <div class="section-header">
+                Featured Works
+            </div>
+            <div class="container">
+                <div class="items">
+                    <div class="item">
+                        FKHRZNN LA
+                    </div>
+                    <div class="item">
+                        PATEBA STUDIO
+                    </div>
+                    <div class="item">
+                        VECRA DS
+                    </div>
+                    <div class="item" >
+                        IIDSAA AWARD
+                    </div>
+            <!-- <div style="width: 103px; height: 0px; left: 513px; top: 776px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+            <div style="width: 103px; height: 0px; left: 960px; top: 776px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+            <div style="width: 103px; height: 0px; left: 1407px; top: 776px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+            <div style="width: 33px; height: 56px; left: 944px; top: 963px; position: absolute; background: rgba(217, 217, 217, 0); border-radius: 32.50px; border: 1px black solid"></div>
+            <div style="width: 16.50px; height: 0px; left: 960.50px; top: 974.50px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+            <img style="width: 54px; height: 54px; left: 43px; top: 40px; position: absolute" src="https://via.placeholder.com/54x54" /> -->
+        </section>
+    </div>
 <script>
 
 </script>
