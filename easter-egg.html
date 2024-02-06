@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hover Ball</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            margin: 2vh auto;
+            border: 1px solid #000;
+            background-color: #F9EFCB  ; /* Change canvas background color */
+            width: 90%; /* Set canvas width to 90% of viewport width */
+            max-width: 1000px; /* Limit canvas width to 1000px */
+            height: auto; /* Allow canvas height to adjust proportionally */
+        }
+
+        #game-over-overlay {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 3px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #game-over-overlay h2 {
+            color: #ff0000; /* Change game-over text color */
+            margin-bottom: 10px;
+        }
+
+        #game-over-overlay p {
+            margin: 5px 0;
+        }
+
+        #restart-button {
+            padding: 10px 20px;
+            background-color: #f0f0f0; /* Change button background color */
+            border: 2px solid #ccc;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        #restart-button:hover {
+            background-color: #ddd; /* Change button background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="game-over-overlay">
+        <h2>Game Over</h2>
+        <p id="last-score">Last Score: 0</p>
+        <p id="best-score">Best Score: 0</p>
+        <button id="restart-button">Restart</button>
+    </div>
+    
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let SCREEN_WIDTH, SCREEN_HEIGHT;
+
+        function resizeCanvas() {
+            // Set canvas dimensions based on viewport size
+            SCREEN_WIDTH = window.innerWidth * 0.9;
+            SCREEN_HEIGHT = window.innerHeight * 0.9;
+
+            // Limit canvas width to 1000px
+            if (SCREEN_WIDTH > 1000) {
+                SCREEN_WIDTH = 1000;
+            }
+
+            // Set canvas size
+            canvas.width = SCREEN_WIDTH;
+            canvas.height = SCREEN_HEIGHT;
+        }
+
+        window.addEventListener('resize', function() {
+            // Resize canvas when window size changes
+            resizeCanvas();
+        });
+
+        resizeCanvas();
+
+        const BALL_COLOR = '#F97340';
+        const PIPE_COLOR = '#2D8C76';
+        const PIPE_WIDTH = SCREEN_HEIGHT / 8 ;
+        const GAP_HEIGHT = SCREEN_HEIGHT / 3;
+        const PIPE_SPEED = 4;
+        const GRAVITY = 0.40;
+        const JUMP_AMOUNT = -8;
+
+        let ball = {
+            x: 300,
+            y: SCREEN_HEIGHT / 2,
+            velocity: 0,
+            radius: SCREEN_WIDTH / 20,
+            score: 0
+        };
+
+        let pipes = [];
+        let frameCounter = 0;
+        let lastScore = 0;
+        let bestScore = 0;
+        let gameStarted = false;
+        let gameOver = false;
+
+        function flap() {
+            ball.velocity = JUMP_AMOUNT;
+        }
+
+        function restartGame() {
+            ball = {
+                x: SCREEN_WIDTH / 3,
+                y: SCREEN_HEIGHT / 2,
+                velocity: 0,
+                radius: SCREEN_WIDTH / 20,
+                score: 0
+            };
+            pipes = [];
+            frameCounter = 0;
+            gameStarted = false;
+            gameOver = false;
+        }
+
+        function update() {
+            if (!gameOver) {
+                ball.velocity += GRAVITY;
+                ball.y += ball.velocity;
+                ball.score += 0.5;
+
+                if (ball.y + ball.radius > SCREEN_HEIGHT) {
+                    gameOver = true;
+                    lastScore = ball.score;
+                    bestScore = Math.max(bestScore, ball.score);
+                }
+
+                if (frameCounter % 100 === 0) {
+                    pipes.push({
+                        x: SCREEN_WIDTH,
+                        height: Math.floor(Math.random() * (SCREEN_HEIGHT - GAP_HEIGHT - 100)) + 50,
+                        passed: false
+                    });
+                }
+
+                pipes.forEach(pipe => {
+                    pipe.x -= PIPE_SPEED;
+                    if (!pipe.passed && pipe.x + PIPE_WIDTH < ball.x) {
+                        pipe.passed = true;
+                    }
+
+                    if (ball.x + ball.radius > pipe.x && ball.x - ball.radius < pipe.x + PIPE_WIDTH) {
+                        if (ball.y - ball.radius < pipe.height || ball.y + ball.radius > pipe.height + GAP_HEIGHT) {
+                            gameOver = true;
+                            lastScore = ball.score;
+                            bestScore = Math.max(bestScore, ball.score);
+                        }
+                    }
+                });
+
+                pipes = pipes.filter(pipe => pipe.x > -PIPE_WIDTH);
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+            // Draw pipes
+            pipes.forEach(pipe => {
+                // Pipe stroke
+                ctx.fillStyle = PIPE_COLOR;
+                ctx.fillRect(pipe.x, 0, PIPE_WIDTH, pipe.height);
+                ctx.fillRect(pipe.x, pipe.height + GAP_HEIGHT, PIPE_WIDTH, SCREEN_HEIGHT);
+                ctx.strokeStyle = "#fff";
+                ctx.strokeRect(pipe.x, 0, PIPE_WIDTH, pipe.height);
+                ctx.strokeRect(pipe.x, pipe.height + GAP_HEIGHT, PIPE_WIDTH, SCREEN_HEIGHT);
+            });
+
+            // Draw ball
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            ctx.fillStyle = BALL_COLOR;
+            ctx.fill();
+            ctx.strokeStyle = "#fff";
+            ctx.stroke();
+            ctx.closePath();
+
+            // Draw score
+            ctx.fillStyle = '#000';
+            ctx.font = '30px arial';
+            ctx.fillText(`Score: ${Math.floor(ball.score)}`, 10, 30);
+
+            if (gameOver) {
+                // Show game over overlay
+                document.getElementById('game-over-overlay').style.display = 'block';
+
+                // Update scores
+                document.getElementById('last-score').textContent = `Last Score: ${Math.floor(lastScore)}`;
+                document.getElementById('best-score').textContent = `Best Score: ${Math.floor(bestScore)}`;
+            } else {
+                // Hide game over overlay
+                document.getElementById('game-over-overlay').style.display = 'none';
+            }
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+            frameCounter++;
+            requestAnimationFrame(gameLoop);
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (!gameStarted && event.key === ' ') {
+                gameStarted = true;
+            }
+            if (!gameOver && event.key === ' ') {
+                flap();
+            }
+            if (gameOver && event.key === ' ') {
+                restartGame();
+            }
+        });
+
+        // Add event listener for mouse click
+        canvas.addEventListener('click', function(event) {
+            if (!gameStarted) {
+                gameStarted = true;
+            }
+            if (!gameOver) {
+                flap();
+
+            }
+        });
+
+        // Add event listener for touch devices
+        canvas.addEventListener('touchstart', function(event) {
+            event.preventDefault();
+            if (!gameStarted) {
+                gameStarted = true;
+            }
+            if (!gameOver) {
+                flap();
+
+            }
+        });
+
+        // Add event listener for restart button
+        document.getElementById('restart-button').addEventListener('click', function() {
+            restartGame();
+        });
+
+        gameLoop();
+    </script>
+</body>
+</html>
