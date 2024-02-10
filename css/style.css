@@ -2,7 +2,6 @@
                   --background-color: rgb(232, 233, 226);
                   --border-color: rgb(187, 187, 187);
                   --highlight-color: #493528;
-                  --yt-color: rgb(229, 57, 53);
                   cursor: crosshair ;
                 }
                 a:hover {
@@ -13,7 +12,7 @@
                   background-color: var(--background-color);
                   display: flex;
                   flex-direction: column;
-                  height: 100svh;
+                  height: 100vh;
                   margin: 0px;
                   overflow: hidden;
                 }
@@ -72,7 +71,7 @@ margin: 0px;
                   color: rgb(14, 14, 14);
                   margin: 0px;
                 }
-                h2, h3, a, p, span {
+                h2, h3, a, p, span{
                   font-family: "Archivo", sans-serif;
                   font-weight: 500;
                   color: rgb(14, 14, 14);
@@ -263,7 +262,6 @@ margin: 0px;
       
                 main > article > .article-title-section > h2 {
                   flex-basis: 50%;
-                  font-family: "Montserrat", sans-serif;
                   font-size: 3.5rem;
                   line-height: 3rem;
                   margin: 0px;
@@ -287,7 +285,7 @@ margin: 0px;
                 }
       
                 main > article > .article-nav-section > .article-nav-button:hover {
-                  background-color: rgba(116, 116, 116, 0.397);
+                  background-color: rgb(116, 116, 116);
                   transition: 0.8s;
                   cursor: crosshair;
                 }
@@ -389,7 +387,7 @@ margin: 0px;
                   #nav-mobile-section {
                     background-color: var(--background-color);
                     flex-direction: column;
-                    height: 100vh;
+                    height: 100dvh;
                     width: 100vw;
                     position: fixed;
                     transform: translateY(-100%);
@@ -446,14 +444,6 @@ margin: 0px;
       
                   }
                 }
-      
-
-      
-          main {
-            flex-grow: 1;
-            position: relative;
-            overflow: hidden;
-          }
 
           main > slides {
             height: 100%;
@@ -595,19 +585,6 @@ margin: 0px;
           }
 
           @media(max-width: 1200px) {    
-            #nav-mobile-section {
-              flex-basis: calc(100% * 0.75);
-            }
-
-            #nav-logo-section {
-              flex-basis: calc(100% * 0.25);
-            }
-            
-            #nav-link-section {
-              flex-basis: calc(100% / 3);
-              gap: 3rem;
-            }
-
             main {
               overflow-y: auto;
             }
@@ -658,64 +635,6 @@ margin: 0px;
             #trailer {
               display: none;
             }
-            nav {
-              justify-content: space-between;  
-            }
-            
-            nav[data-toggled="true"] > #nav-mobile-section {  
-              transform: translateY(0%);
-            }
-
-            nav[data-toggled="true"] > #nav-toggle-button {
-              border-left: none;
-            }
-
-            nav[data-transitionable="true"] > #nav-mobile-section {
-              transition: transform 400ms ease;
-            }
-            
-            nav .nav-section {
-              border-left: none;
-              padding: 1.5rem 1rem;
-            }
-            
-            #nav-logo-section > a > i {
-              font-size: 1.5rem;
-              margin-left: 1rem;
-            }
-            
-            #nav-mobile-section {
-              background-color: var(--background-color);
-              flex-direction: column;
-              height: 100dvh;
-              width: 100vw;
-              position: fixed;
-              transform: translateY(-100%);
-            } 
-            
-            #nav-toggle-button {
-              touch-action: manipulation;
-              display: flex;
-            }  
-            
-            #nav-link-section {
-              flex-basis: 60%;
-              flex-direction: column;
-              gap: 4rem;
-            }
-            
-            #nav-link-section > a {
-              font-size: 3rem; 
-            }
-            
-            #nav-social-section > a {
-              font-size: 2rem; 
-            }  
-            
-            #nav-contact-section {
-              padding-bottom: 4rem;
-            }
-            
             main > slides {
               grid-template-rows: 1fr repeat(4, 0.5fr);
               height: max(700px, 100%);
