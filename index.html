@@ -9,488 +9,66 @@
     <meta name="keywords" content="Research and Development, UI/UX Designer, Product Designer">
     <meta name="author" content="fakhrirozann">
     <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>fakhrirozann | Product Designer | Research & Development | Bachelor in Product Design</title>
-    <style>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
 
-      /* Hide scrollbar for IE, Edge and Firefox */
-.example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.example::-webkit-scrollbar {
-    display: none;
-}
-          :root {
-            --background-color: rgb(255, 255, 255);
-            --border-color: rgb(187, 187, 187);
-            --highlight-color: rgb(0, 182, 152);
-            --yt-color: rgb(229, 57, 53);
-            cursor: crosshair ;
-          }
-
-          body {
-            background-color: var(--background-color);
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0px;
-            overflow: hidden;
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-          h1 {
-
-            font-weight: 400;
-            color: rgb(14, 14, 14);
-            margin: 0px;
-          }
-          h2, h3, a, p, span {
-            font-family: "Playfaird Dislay", sans-serif;
-            font-weight: 400;
-            color: rgb(14, 14, 14);
-            margin: 0px;
-          }
-          p {
-            color: rgb(14, 14, 14);
-          }
-          a {
-            text-decoration: none;
-          }
-
-          a:hover {
-            color: var(--highlight-color);
-          }
-
-          nav {
-            display: flex;
-            width: 100%;
-            border-bottom: 1px solid var(--border-color);
-          }
-
-          nav .nav-section {
-            padding: 3rem 2rem;
-            display: flex;
-            gap: 1rem;
-            border-left: 1px solid var(--border-color);
-            align-items: center;
-            justify-content: center;
-          }
-
-          #nav-mobile-section {
-            display: flex;
-            flex-basis: calc(100% * (2 / 3));
-            z-index: 2;
-          }
-
-          #nav-toggle-button { 
-            touch-action: manipulation;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            border-left: 1px solid var(--border-color);
-            color: rgb(0, 0, 0);
-            cursor: pointer;
-            display: none;
-            gap: 0.8rem;
-            height: 100%;
-            justify-content: center;
-            outline: none;
-            padding: 0rem 3rem;
-            position: relative;
-            z-index: 3;
-          }
-
-          #nav-toggle-button:hover,
-          #nav-toggle-button:hover > span {
-            touch-action: manipulation;
-            color: var(--highlight-color);
-          }
-
-          #nav-toggle-button > span,
-          #nav-toggle-button > i { 
-            display: inline-block;
-            height: 1rem;
-            line-height: 1rem;
-          }
-
-          #nav-social-section,
-          #nav-contact-section {
-            flex-grow: 1;
-          }
-
-          #nav-logo-section {
-            flex-basis: calc(100% / 3);
-            justify-content: flex-start;
-          }
-
-          #nav-logo-section > a > i {
-            font-size: 4.5rem;
-          }
-
-          #nav-link-section {
-            flex-basis: 50%;
-            gap: 6rem; 
-          }
-
-          #nav-social-section {
-            gap: 3rem;
-          }
-
-          main {
-            flex-grow: 1;
-            position: relative;
-            overflow: hidden;
-          }
-
-          main > article {
-            height: 100%;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: 2fr 1fr;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            transition: transform 400ms ease;  
-          }
-
-          main > article[data-status="inactive"] {
-            transform: translateX(-100%);
-            transition: none;
-          }
-
-          main > article[data-status="active"] {
-            transform: translateX(0%);
-          }
-
-          main > article[data-status="before"] {
-            transform: translateX(-100%);
-          }
-
-          main > article[data-status="after"] {
-            transform: translateX(100%);
-          }
-
-          main > article[data-status="becoming-active-from-before"] {
-            transform: translateX(-100%);
-            transition: none;
-          }
-
-          main > article[data-status="becoming-active-from-after"] {
-            transform: translateX(100%);
-            transition: none;
-          }
-
-          main > article > .article-section {
-            height: 100%;
-            display: flex;
-          }
-
-          main > article > .article-description-section,
-          main > article > .article-nav-section {
-            border-left: 1px solid var(--border-color);
-          }
-
-          main > article > .article-title-section,
-          main > article > .article-nav-section {
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-          }
-
-          /*sc: UMOCA .gif shop*/
-          main > article:first-child > .article-image-section {
-            background-image: url("https://utahmoca.org/wp-content/uploads/2021/10/ello-optimized-49cfab4b.gif");
-          }
-
-          main > article > .article-image-section {
-            background-position: center;
-            background-size: cover;
-          }
-
-          main > article > .article-description-section {
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 4rem; 
-          }
-
-          main > article > .article-description-section > p {
-            color: rgb(14, 14, 14);
-            font-size: 1.25em;
-          }
-
-          main > article > .article-description-section > p  > a:hover {
-            text-decoration: underline;
-          }
-
-          main > article > .article-title-section {
-            align-items: center; 
-            justify-content: space-between;
-            padding: 2rem 4rem;
-          }
-
-          main > article > .article-title-section * {
-            color: rgb(26, 26, 26);
-          }
-
-          main > article > .article-title-section > h2 {
-            flex-basis: 50%;
-            font-family: "Montserrat", sans-serif;
-            font-size: 3.5rem;
-            line-height: 3rem;
-            margin: 0px;
-            text-transform: uppercase;
-          }
-
-          main > article > .article-title-section > i {
-            color: rgba(37, 37, 37, 0.75);
-            font-size:  4rem;
-          }
-
-          main > article > .article-nav-section > .article-nav-button {
-            background-color: transparent;
-            flex-grow: 1;
-            border: none;
-            outline: none;
-            color: rgba(63, 63, 63, 0.75);
-            font-size: 3rem;
-            cursor: pointer;
-            transition: 0.8s;
-          }
-
-          main > article > .article-nav-section > .article-nav-button:hover {
-            background-color: rgba(116, 116, 116, 0.397);
-            transition: 0.8s;
-          }
-
-          main > article > .article-nav-section > .article-nav-button:nth-child(2) {
-            border-left: 1px solid var(--border-color);
-          }
-
-          @media(max-width: 1200px) {    
-            #nav-mobile-section {
-              flex-basis: calc(100% * 0.75);
-            }
-
-            #nav-logo-section {
-              flex-basis: calc(100% * 0.25);
-            }
-            
-            #nav-link-section {
-              flex-basis: calc(100% / 3);
-              gap: 3rem;
-            }
-
-            main {
-              overflow-y: auto;
-            }
-            
-            main > article {
-              grid-template-columns: none;
-              grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
-              height: max(900px, 100%);
-            }
-            
-            main > article > .article-title-section > h2 {
-              font-size: 3rem; 
-              line-height: 2.6rem;
-            }
-            
-            main > article > .article-title-section > i {
-              font-size: 3rem; 
-            }
-            
-            main > article > .article-description-section,
-            main > article > .article-nav-section {
-              border-left: none;
-            }
-
-            main > article > .article-image-section {
-              order: 1;
-            }
-            
-            main > article > .article-title-section {
-              border-bottom: 1px solid var(--border-color);
-              order: 2;
-            }
-            
-            main > article > .article-description-section {
-              justify-content: center;
-              order: 3;
-            }
-            
-            main > article > .article-nav-section {
-              border-bottom: 1px solid var(--border-color);
-              order: 4;
-            }
-          }
-
-          @media(max-width: 800px) {  
-            nav {
-              justify-content: space-between;  
-            }
-            
-            nav[data-toggled="true"] > #nav-mobile-section {  
-              transform: translateY(0%);
-            }
-
-            nav[data-toggled="true"] > #nav-toggle-button {
-              border-left: none;
-            }
-
-            nav[data-transitionable="true"] > #nav-mobile-section {
-              transition: transform 400ms ease;
-            }
-            
-            nav .nav-section {
-              border-left: none;
-              padding: 1.5rem 1rem;
-            }
-            
-            #nav-logo-section > a > i {
-              font-size: 1.2rem;
-              margin-left: 1rem;
-            }
-            
-            #nav-mobile-section {
-              background-color: var(--background-color);
-              flex-direction: column;
-              height: 100vh;
-              width: 100vw;
-              position: fixed;
-              transform: translateY(-100%);
-            } 
-            
-            #nav-toggle-button {
-              touch-action: manipulation;
-              display: flex;
-            }  
-            
-            #nav-link-section {
-              flex-basis: 60%;
-              flex-direction: column;
-              gap: 4rem;
-            }
-            
-            #nav-link-section > a {
-              font-size: 3rem; 
-            }
-            
-            #nav-social-section > a {
-              font-size: 2rem; 
-            }  
-            
-            #nav-contact-section {
-              padding-bottom: 4rem;
-            }
-            
-            main > article {
-              grid-template-rows: 1fr repeat(4, 0.5fr);
-              height: 100%;
-            }
-            
-            main > article > .article-title-section {
-              padding: 2rem;
-            }
-            
-            main > article > .article-title-section > h2 {
-              flex-basis: 70%;
-              font-size: 1.75em; 
-              line-height: 1.5rem;
-            }
-            
-            main > article > .article-title-section > i {
-              font-size: 2rem; 
-            }
-            
-            main > article > .article-description-section {
-              padding: 2rem;
-            }
-            
-            main > article > .article-description-section > p {
-              font-size: 1rem;
-
-            }
-          }
-
-          /* -- YT link / Source link styles -- */
-
-          main > article > .article-description-section > p  > .source-link {
-            color: var(--highlight-color);
-            display: inline;
-          }
-
-          main > article .yt-link,
-          main > article .yt-link > i {
-            color: var(--yt-color);
-            display: inline;
-          }
-          /* custom mouse */
-          .info {
-          font-family: monospace;
-          position: absolute;
-          line-height: 20px;
-          font-size: 14px;
-          left: 20px;
-          top: 20px;
-          }
-
-          /* sticky tooltip */
-          /* logo */
-
-          </style>
-</head>
 <body>
-    <nav data-toggled="false" data-transitionable="false">
-        <div id="nav-logo-section" class="nav-section">
-        <a href="https://fakhrirozann.github.io" id="h2">
-        <img src="favicon.ico" width="30px" height="auto"></a>
-        </div>
-        <div id="nav-mobile-section">
-        <div id="nav-link-section" class="nav-section">
-            <a  href="https://fakhrirozann.github.io/about">Who? </a>
-            <a href="https://fakhrirozann.github.io/work">What?</a>
-        </div>
-        <div id="nav-social-section" class="nav-section">
-            <a href="https://www.linkedin.com/in/fakhrirozann" target="_blank">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.behance.net/fakhrirozann" target="_blank">
-            <i class="fa fa-behance" aria-hidden="true"></i>
-            </a>    
-            <a href="https://github.com/fakhrirozann" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i>
-            </a>
-        </div>
-        <div id="nav-contact-section" class="nav-section">
-            <a href="https://www.linkedin.com/in/fakhrirozann">Say Hello</a>
-        </div>
-        </div>
-        
-        <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
-        <span>Menu</span>
-        <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
-    </nav>
+
+  <div id="trailer">
+    <!-- <i id="trailer-icon" class="fa fa-plus"></i> -->
+  </div>  
+
+  <nav data-toggled="false" data-transitionable="false">
+    <div id="nav-logo-section" class="nav-section">
+    <a  class="interactable" href="https://fakhrirozann.github.io">
+    <img  src="favicon.ico" width="30px" height="auto">
+    </a>
+    </div>
+    <div id="nav-mobile-section">
+    <div id="nav-link-section" class="nav-section">
+        <a style="padding: 10px;" class="interactable" href="https://fakhrirozann.github.io/about">Who? </a>
+        <a style="padding: 10px;" class="interactable" href="https://fakhrirozann.github.io/work">What?</a>
+    </div>
+    <div id="nav-social-section" class="nav-section">
+        <a style="padding: 10px;" class="interactable" href="https://www.vecra.id" target="_blank">
+          <i class="fa fa-asterisk" aria-hidden="true"></i>
+        </a>
+        <a style="padding: 10px;" class="interactable" href="https://www.behance.net/fakhrirozann" target="_blank" data-type="link">
+        <i class="fa fa-behance" aria-hidden="true"></i>
+        </a>    
+    </div>
+    <div id="nav-contact-section" class="nav-section">
+        <a style="padding: 10px;" class="interactable" href="https://www.linkedin.com/in/fakhrirozann">Say Hello</a>
+    </div>
+    </div>
+    
+    <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+    <span>Menu</span>
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+</nav>
     
     <main>
       <article data-index="0" data-status="active">
-        <div class="article-image-section article-section"></div>
+        <div class="article-image-section article-section interactable" data-type="video"></div>
         <div class="article-description-section article-section">
           <p>
             Hi, im Fakhri Rozann. A Product Designer with experiences in Research and Development. Also interested (included but not limited to) in Visual Branding and UI/UX Design work</i></a>.
           </p>
         </div>
-        <div class="article-title-section article-section">
-          <h2>PRODUCT DESIGNER, RnD</h2>
-          <i class="fa-light fa-plus-large"></i>
+        <div class="article-title-section article-section interactable">
+          <h1>PRODUCT DESIGNER</h1>
+          <!-- <h1>PRODUCT DESIGNER</h1> -->
+          <i class="fa fa-plus"></i>
         </div>
         <div class="article-nav-section article-section">
           <button class="article-nav-button" type="button" onclick="workhome()">
-            <i class="fa fa-compass" aria-hidden="true"> WORK</i>
+            <i style="color: #1a1a1a;" class="fa fa-industry" aria-hidden="true"></i>
           </button>
         </div>
       </article>
@@ -520,7 +98,45 @@
         const body = document.body;
 
         });
-        
+        const trailer = document.getElementById("trailer");
+
+const animateTrailer = (e, interacting) => {
+  const x = e.clientX - trailer.offsetWidth / 2,
+        y = e.clientY - trailer.offsetHeight / 2;
+  
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+  }
+  
+  trailer.animate(keyframes, { 
+    duration: 800, 
+    fill: "forwards" 
+  });
+}
+
+const getTrailerClass = type => {
+  switch(type) {
+    case "video":
+      return "fa fa-play";
+    default:
+      return "fa fa-plus"; 
+  }
+}
+
+window.onmousemove = e => {
+  const interactable = e.target.closest(".interactable"),
+        interacting = interactable !== null;
+  
+  const icon = document.getElementById("trailer-icon");
+  
+  animateTrailer(e, interacting);
+  
+  trailer.dataset.type = interacting ? interactable.dataset.type : "";
+  
+  if(interacting) {
+    icon.className = getTrailerClass(interactable.dataset.type);
+  }
+}
     </script>
 </body>
 </html>

@@ -9,9 +9,13 @@
     <meta name="keywords" content="Research and Development, UI/UX Designer, Product Designer">
     <meta name="author" content="fakhrirozann">
     <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>fakhrirozann | Portfolio</title>
-    <style>
+    <title>fakhrirozann | Product Designer | Research & Development | Bachelor in Product Design</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <style>
           :root {
             --background-color: rgb(255, 255, 255);
             --border-color: rgb(0, 0, 0);
@@ -442,57 +446,62 @@
           left: 20px;
           top: 20px;
         }
-    </style>
+    </style> -->
   </head>
   <body>
-  <nav data-toggled="false" data-transitionable="false">
-    <div id="nav-logo-section" class="nav-section">
-      <a href="https://fakhrirozann.github.io" id="h2">
-      <img src="favicon.ico" width="30px" height="auto"></a>
+
+    <div id="trailer">
+      <!-- <i id="trailer-icon" class="fa fa-bullseye"></i> -->
+    </div> 
+
+    <nav data-toggled="false" data-transitionable="false">
+      <div id="nav-logo-section" class="nav-section">
+      <a  class="interactable" href="https://fakhrirozann.github.io">
+      <img  src="favicon.ico" width="30px" height="auto">
+      </a>
       </div>
       <div id="nav-mobile-section">
       <div id="nav-link-section" class="nav-section">
-          <a  href="https://fakhrirozann.github.io/about">Who? </a>
-          <a href="https://fakhrirozann.github.io/work">What?</a>
+          <a style="padding: 10px;" class="interactable" href="https://fakhrirozann.github.io/about">Who? </a>
+          <a style="padding: 10px;" class="interactable" href="https://fakhrirozann.github.io/work">What?</a>
       </div>
       <div id="nav-social-section" class="nav-section">
-          <a href="https://www.linkedin.com/in/fakhrirozann" target="_blank">
-          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <a style="padding: 10px;" class="interactable" href="https://www.vecra.id" target="_blank">
+            <i class="fa fa-asterisk" aria-hidden="true"></i>
           </a>
-          <a href="https://www.behance.net/fakhrirozann" target="_blank">
+          <a style="padding: 10px;" class="interactable" href="https://www.behance.net/fakhrirozann" target="_blank" data-type="link">
           <i class="fa fa-behance" aria-hidden="true"></i>
           </a>    
-          <a href="https://github.com/fakhrirozann" target="_blank">
-          <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
       </div>
       <div id="nav-contact-section" class="nav-section">
-          <a href="https://www.linkedin.com/in/fakhrirozann">Say Hello</a>
+          <a style="padding: 10px;" class="interactable" href="https://www.linkedin.com/in/fakhrirozann">Say Hello</a>
       </div>
       </div>
+      
       <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
-          <span>Menu</span>
-          <i class="fa fa-bars" aria-hidden="true"></i>
+      <span>Menu</span>
+      <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
   </nav>
+  
 
   <main>
       <slides data-index="0" data-status="active">
         <div class="slides-image-section slides-section"></div>
         <div class="slides-description-section slides-section">
           <p>
-            Skyscraper roofline against a pale blue sky in Boston, MA, USA.
+            Creative works at vecra. Designing visual identity, Branding, Promotional material, Marketing collateral and  Products for SME, Schools, local non-profit and public organisation, several local FnB business, shops and some individual project. 
           </p>
         </div>
         <div class="slides-title-section slides-section">
-          <h2>FUJIFILM, X-T20</h2>
-          <i class="fa-light fa-plus-large"></i>
+          <h1 class="interactable">VECRA CREATIVE</h1>
+          <i class="fa fa-plus"></i>
         </div>
         <div class="slides-nav-section slides-section">
-          <button class="slides-nav-button" type="button" onclick="handleLeftClick()">
+          <button class="slides-nav-button interactable" type="button" onclick="handleLeftClick()">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </button>
-          <button class="slides-nav-button" type="button" onclick="handleRightClick()">
+          <button class="slides-nav-button interactable" type="button" onclick="handleRightClick()">
             <i class="fa fa-angle-right" aria-hidden="true"></i>          
           </button>
         </div>
@@ -504,8 +513,8 @@
           <p>The afternoon rays illuminate a group of clouds as the sun approaches the horizon.</p>
         </div>
         <div class="slides-title-section slides-section">
-            <h2>SONY, ILCE-6000</h2>
-          <i class="fa-light fa-plus-large"></i>
+            <h1>SONY, ILCE-6000</h1>
+          <i class="fa fa-plus"></i>
         </div>
         <div class="slides-nav-section slides-section">
           <button class="slides-nav-button" type="button" onclick="handleLeftClick()">
@@ -523,7 +532,7 @@
           <p>Mulher no horizonte, em cima de uma das dunas dos Lençóis Maranhenses.</p>
         </div>
         <div class="slides-title-section slides-section">
-          <h2>Canon, EOS REBEL T3i</h2>
+          <h1>Canon, EOS REBEL T3i</h1>
           <i class="fa-light fa-plus-large"></i>
         </div>
         <div class="slides-nav-section slides-section">
@@ -543,7 +552,7 @@
             Sandstone plateau, Hisma Desert – NEOM, Saudi Arabia.</p>
         </div>
         <div class="slides-title-section slides-section">
-          <h2>Hasselblad, L2D-20c</h2>
+          <h1>Hasselblad, L2D-20c</h1>
           <i class="fa-light fa-plus-large"></i>
         </div>
         <div class="slides-nav-section slides-section">
@@ -623,6 +632,44 @@ window.addEventListener("load",function() {
 		window.scrollTo(0, 1);
 	}, 0);
 });
+
+const animateTrailer = (e, interacting) => {
+  const x = e.clientX - trailer.offsetWidth / 2,
+        y = e.clientY - trailer.offsetHeight / 2;
+  
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+  }
+  
+  trailer.animate(keyframes, { 
+    duration: 800, 
+    fill: "forwards" 
+  });
+}
+
+const getTrailerClass = type => {
+  switch(type) {
+    case "video":
+      return "fa fa-play";
+    default:
+      return "fa fa-plus"; 
+  }
+}
+
+window.onmousemove = e => {
+  const interactable = e.target.closest(".interactable"),
+        interacting = interactable !== null;
+  
+  const icon = document.getElementById("trailer-icon");
+  
+  animateTrailer(e, interacting);
+  
+  trailer.dataset.type = interacting ? interactable.dataset.type : "";
+  
+  if(interacting) {
+    icon.className = getTrailerClass(interactable.dataset.type);
+  }
+}
     </script>	
   </body>
 </html>
