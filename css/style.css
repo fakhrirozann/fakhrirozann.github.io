@@ -83,6 +83,7 @@ margin: 0px;
       
                 a:hover {
                   color: var(--highlight-color);
+                  font-style: oblique;
                 }
       
                 nav {
@@ -610,24 +611,28 @@ margin: 0px;
           }
 
           main > slides:first-child > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1628270680011-41792b21de87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80auto=format&fit=crop&w=1932&q=80&auto=format&fit=crop&w=1035&q=80");
+            background-image: url("https://media1.giphy.com/media/3oEhmIDWKdv2yZAaTm/giphy.gif?cid=ecf05e476wqzqtptma4mwsialable4rir4ct3wtwivscdzzk&ep=v1_gifs_related&rid=giphy.gif&ct=g");
+
           }
 
           main > slides:nth-child(2) > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1663344010224-a89a22f14bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=2574&q=80");
+            background-image: url("https://fakhrirozann.github.io/iidsa.png");
           }
-
+          /* }https://images.unsplash.com/photo-1663344010224-a89a22f14bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=2574&q=80 */
+/* https://images.unsplash.com/photo-1628270680011-41792b21de87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80auto=format&fit=crop&w=1932&q=80&auto=format&fit=crop&w=1035&q=80 */
           main > slides:nth-child(3) > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80");
+            background-image: url("https://www.yankodesign.com/images/design_news/2020/09/harley-davidson-revival-is-an-electric-motorcycle-envisioned-for-young-riders/Harley-Davidson-Revival_Electric-Motorcycle_-Yanko-Design.jpg");
           }
-
+/* https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80 */
           main > slides:nth-child(4) > .slides-image-section {
             background-image: url("https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80");
           }
 
           main > slides > .slides-image-section {
             background-position: center;
-            background-size: cover;
+            background-size: cover;  
+            align-content: center;
+            justify-content: center;
           }
 
           main > slides > .slides-description-section {
@@ -661,8 +666,8 @@ margin: 0px;
             font-size:  4rem;
           }
 
-          main > slides > .slides-title-section > h1 {
-
+          main > slides > .slides-title-section > h2 {
+            font-weight: 900;
             font-size:  8svh;
           }
 
@@ -702,8 +707,9 @@ margin: 0px;
             }
             
             main > slides > .slides-title-section > h2 {
-              font-size: 3rem; 
-              line-height: 2.6rem;
+              font-size: 8svh;
+              font-weight: 900; 
+              line-height: 8svh;
             }
             
             main > slides > .slides-title-section > i {
@@ -752,8 +758,8 @@ margin: 0px;
             
             main > slides > .slides-title-section > h2 {
               flex-basis: 70%;
-              font-size: 1.75em; 
-              line-height: 1.5rem;
+              font-size: 4svh; 
+              line-height: 4svh;
             }
             
             main > slides > .slides-title-section > i {
