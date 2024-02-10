@@ -55,7 +55,7 @@ body:hover > #trailer {
 }
 
 .interactable {
-margin: 0px;
+  margin: 0px;
 }
 
 .interactable:hover {
@@ -223,6 +223,11 @@ margin: 0px;
                   border-top: 1px solid var(--border-color);
                   border-bottom: 1px solid var(--border-color);
                 }
+
+                main > article > .article-nav-section {
+                  border-top: 1px solid var(--border-color);
+                  border-bottom: 1px solid var(--border-color);
+                }
       
                 /*sc: UMOCA .gif shop or https://www.instagram.com/ed.lefler*/ 
                 main > article:first-child > .article-image-section {
@@ -254,23 +259,65 @@ margin: 0px;
                   align-items: center; 
                   justify-content: space-between;
                   padding: 2rem 4rem;
+
                 }
       
                 main > article > .article-title-section * {
                   color: rgb(26, 26, 26);
                 }
       
-                main > article > .article-title-section > h2 {
+                main article .article-title-section h2 {
                   flex-basis: 50%;
-                  font-size: 3.5rem;
-                  line-height: 3rem;
+                  font-family: 'Archivo', sans-serif;
+                  font-weight: 900;
+                  font-size: 8svh;
+                  line-height: 8svh;
                   margin: 0px;
                   text-transform: uppercase;
                 }
-      
+                
+                main article .article-title-section .inner-headings {
+                  border: 0px solid #ddd;
+                  height: 8svh;
+                  overflow: hidden;
+                }
+                
+                main article .article-title-section .inner-headings span {
+                  position: relative;
+                  animation: animation 10s ease infinite;
+                }
+                
+                @keyframes animation {
+                  0%,
+                  100% {
+                    top: 0;
+                  }
+                  20% {
+                    top: 0;
+                  }
+                  25% {
+                    top: -8svh;
+                  }
+                  45% {
+                    top: -8svh;
+                  }
+                  50% {
+                    top: -16svh;
+                  }
+                  70% {
+                    top: -16svh;
+                  }
+                  75% {
+                    top: -24svh;
+                  }
+                  95% {
+                    top: -24svh;
+                  }
+                }
+
                 main > article > .article-title-section > i {
-                  color: rgba(37, 37, 37, 0.75);
-                  font-size:  4rem;
+                  color: rgba(26, 26, 26);
+                  font-size:  8rem;
                 }
       
                 main > article > .article-nav-section > .article-nav-button {
@@ -282,6 +329,7 @@ margin: 0px;
                   font-size: 3rem;
                   cursor: pointer;
                   transition: 0.8s;
+                  cursor: crosshair;
                 }
       
                 main > article > .article-nav-section > .article-nav-button:hover {
@@ -339,6 +387,18 @@ margin: 0px;
                   main > article > .article-title-section {
                     border-bottom: 1px solid var(--border-color);
                     order: 2;
+                  }
+
+                  main article .article-title-section .inner-headings {
+                    border: 0px solid #ddd;
+                    height: 8svh;
+                    line-height: 8svh;
+                    overflow: hidden;
+                  }
+                  
+                  main article .article-title-section .inner-headings span h2{
+                    font-size: 5svh;
+
                   }
                   
                   main > article > .article-description-section {
@@ -424,6 +484,54 @@ margin: 0px;
                   main > article > .article-title-section {
                     padding: 2rem;
                   }
+
+                  main article .article-title-section h2 {
+                    flex-basis: 50%;
+                    font-family: 'Archivo', sans-serif;
+                    font-weight: 900;
+                    font-size: 8dvh;
+                    line-height: 4dvh;
+                  }
+
+                  main article .article-title-section .inner-headings {
+                    border: 0px solid #ddd;
+                    height: 8dvh;
+                    overflow: hidden;
+                  }
+                  
+                  main article .article-title-section .inner-headings span {
+                    position: relative;
+                    justify-self: center;
+                    animation: animation 10s ease infinite;
+                  }
+                  
+                  @keyframes animation {
+                    0%,
+                    100% {
+                      top: 0;
+                    }
+                    20% {
+                      top: 0;
+                    }
+                    25% {
+                      top: -7.6dvh;
+                    }
+                    45% {
+                      top: -7.6dvh;
+                    }
+                    50% {
+                      top: -15.5dvh;
+                    }
+                    70% {
+                      top: -15.5dvh;
+                    }
+                    75% {
+                      top: -23.5dvh;
+                    }
+                    95% {
+                      top: -23.5dvh;
+                    }
+                  }
                   
                   main > article > .article-title-section > h2 {
                     flex-basis: 70%;
@@ -444,6 +552,7 @@ margin: 0px;
       
                   }
                 }
+                
 
           main > slides {
             height: 100%;
@@ -546,18 +655,15 @@ margin: 0px;
             color: rgb(26, 26, 26);
           }
 
-          main > slides > .slides-title-section > h2 {
-            flex-basis: 50%;
-            font-family: "Montserrat", sans-serif;
-            font-size: 3.5rem;
-            line-height: 3rem;
-            margin: 0px;
-            text-transform: uppercase;
-          }
 
           main > slides > .slides-title-section > i {
             color: rgba(37, 37, 37, 0.75);
             font-size:  4rem;
+          }
+
+          main > slides > .slides-title-section > h1 {
+
+            font-size:  8svh;
           }
 
           main > slides > .slides-nav-section > .slides-nav-button {
