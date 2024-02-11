@@ -17,8 +17,8 @@
                 }
                 
                 html[data-theme='dark'] {
-                    --background-color: #232835;
-                    --border-color: #554921;
+                    --background-color: #11141d;
+                    --border-color: #967b23;
                     --font-icon-color: #cfb354;                   
                     --highlight-color: #f1d98a;
                     --button-hover-color: #272c38;
@@ -504,6 +504,7 @@
                   }
                   
                   #nav-mobile-section {
+                    border-left: none;
                     background-color: var(--background-color);
                     flex-direction: column;
                     height: 100dvh;
@@ -518,6 +519,7 @@
                   }  
                   
                   #nav-link-section {
+                    border-left: none;
                     justify-content: flex-end;
                     flex-basis: 60%;
                     flex-direction: column;
@@ -530,9 +532,14 @@
                   
                   #nav-social-section > a {
                     font-size: 2rem; 
-                  }  
+                  }
+                  
+                  #nav-social-section{
+                    border-left: none;
+                  }
                   
                   #nav-contact-section {
+                    border-left: none;
                     padding-bottom: 4rem;
                   }
                   
