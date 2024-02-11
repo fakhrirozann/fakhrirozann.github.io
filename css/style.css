@@ -1,15 +1,30 @@
                 :root {
-                  --background-color: rgb(192, 192, 192);
-                  --border-color: rgb(139, 139, 139);                  
-                  /* --background-color: rgb(232, 233, 226);
-                  --border-color: rgb(187, 187, 187); */
-                  --highlight-color: #493528;
+                  --background-color: #e8e9e2;
+                  --border-color: rgb(139, 139, 139);
+                  --font-icon-color: #1c1b1f;                   
+                  --highlight-color: #000000;
+                  --button-hover-color: #c1c2bd;
                   cursor: crosshair ;
                 }
-                a:hover {
-                  cursor:none;
-                 }
-                 
+
+                /* theme dark or light */
+                html[data-theme='light'] {
+                  --background-color: #e8e9e2;
+                  --border-color: rgb(139, 139, 139);
+                  --font-icon-color: #1c1b1f;                   
+                  --highlight-color: #000000;
+                  --button-hover-color: #c1c2bd;
+                }
+                
+                html[data-theme='dark'] {
+                    --background-color: #232835;
+                    --border-color: #554921;
+                    --font-icon-color: #cfb354;                   
+                    --highlight-color: #f1d98a;
+                    --button-hover-color: #474747;
+                }
+                /*  */
+                
                 body {
                   background-color: var(--background-color);
                   display: flex;
@@ -19,50 +34,54 @@
                   overflow: hidden;
                 }
       
-body:hover > #trailer {
-  opacity: 1;
-}
+                /* mouse trailer */
+                body:hover > #trailer {
+                  opacity: 1;
+                }
 
-#trailer {
-  height: 15px;
-  width: 15px;
-  background-color: rgb(228, 53, 41);
-  mix-blend-mode: difference;
-  border-radius: 20px;
-  border-style: none;
-  
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 10000;
-  
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 500ms ease;
-  
-  display: grid;
-  place-items: center;
-}
+                #trailer {
+                  height: 15px;
+                  width: 15px;
+                  background-color: rgb(255, 17, 0);
+                  mix-blend-mode: difference;
+                  border-radius: 20px;
+                  border-style: none;
+                  
+                  position: fixed;
+                  left: 0px;
+                  top: 0px;
+                  z-index: 10000;
+                  
+                  pointer-events: none;
+                  opacity: 0;
+                  transition: opacity 500ms ease;
+                  
+                  display: grid;
+                  place-items: center;
+                }
 
-#trailer:not([data-type=""]) > #trailer-icon {
-  opacity: 1;
-}
+                #trailer:not([data-type=""]) > #trailer-icon {
+                  opacity: 1;
+                }
 
-#trailer-icon {
-  font-size: 3px;
-  line-height: 2px;
+                #trailer-icon {
+                  font-size: 3px;
+                  line-height: 2px;
 
-  opacity: 0;
-  transition: opacity 400ms ease;
-}
+                  opacity: 0;
+                  transition: opacity 400ms ease;
+                }
 
-.interactable {
-  margin: 0px;
-}
+                .interactable {
+                  margin: 0px;
+                }
 
-.interactable:hover {
-margin: 0px;
-}
+                .interactable:hover {
+                margin: 0px;
+                }
+                /*  */
+
+                /* HOMEPAGE */
                 * {
                   box-sizing: border-box;
                 }
@@ -70,13 +89,13 @@ margin: 0px;
                   font-family: 'Archivo', sans-serif;
                   font-weight: 900;
                   font-size: 8svh;
-                  color: rgb(14, 14, 14);
+                  color: var(--font-icon-color);
                   margin: 0px;
                 }
                 h2, h3, a, p, span{
                   font-family: "Archivo", sans-serif;
                   font-weight: 500;
-                  color: rgb(14, 14, 14);
+                  color: var(--font-icon-color );
                   margin: 0px;
                 }
                 a {
@@ -86,6 +105,7 @@ margin: 0px;
                 a:hover {
                   color: var(--highlight-color);
                   font-style: oblique;
+                  cursor:none;
                 }
                 
                 /* tooltip */
@@ -142,7 +162,7 @@ margin: 0px;
                   background-color: transparent;
                   border: none;
                   border-left: 1px solid var(--border-color);
-                  color: rgb(0, 0, 0);
+                  color: var(--font-icon-color);
                   cursor: pointer;
                   display: none;
                   gap: 0.8rem;
@@ -162,7 +182,8 @@ margin: 0px;
                 }
       
                 #nav-toggle-button > span,
-                #nav-toggle-button > i { 
+                #nav-toggle-button > i {
+                  color: var(--font-icon-color-color); 
                   display: inline-block;
                   height: 1rem;
                   line-height: 1rem;
@@ -179,8 +200,10 @@ margin: 0px;
                   justify-content: flex-start;
                 }
       
-                #nav-logo-section > a > i {
-                  font-size: 4.5rem;
+                #nav-logo-section > span > a {
+                  font-size: 2rem;
+                  font-weight: 900;
+                  font-style: oblique;
                 }
       
                 #nav-link-section {
@@ -277,7 +300,7 @@ margin: 0px;
                 }
       
                 main > article > .article-description-section > p {
-                  color: rgb(14, 14, 14);
+                  color:var(--font-icon-color);
                   font-size: 1.25em;
                 }
       
@@ -293,7 +316,7 @@ margin: 0px;
                 }
       
                 main > article > .article-title-section * {
-                  color: rgb(26, 26, 26);
+                  color: var(--font-icon-color);
                 }
       
                 main article .article-title-section h2 {
@@ -307,7 +330,7 @@ margin: 0px;
                 }
                 
                 main article .article-title-section .inner-headings {
-                  border: 0px solid #ddd;
+                  
                   height: 8svh;
                   overflow: hidden;
                 }
@@ -346,7 +369,7 @@ margin: 0px;
                 }
 
                 main > article > .article-title-section > i {
-                  color: rgba(26, 26, 26);
+                  color: var(--font-icon-color);
                   font-size:  8rem;
                 }
       
@@ -355,7 +378,6 @@ margin: 0px;
                   flex-grow: 1;
                   border: none;
                   outline: none;
-                  color: rgba(63, 63, 63, 0.75);
                   font-size: 3rem;
                   cursor: pointer;
                   transition: 0.8s;
@@ -363,7 +385,7 @@ margin: 0px;
                 }
       
                 main > article > .article-nav-section > .article-nav-button:hover {
-                  background-color: rgb(116, 116, 116);
+                  background-color: var(--button-hover-color);
                   transition: 0.8s;
                   cursor: crosshair;
                 }
@@ -381,6 +403,10 @@ margin: 0px;
                     flex-basis: calc(100% * 0.25);
                   }
                   
+                  #nav-logo-section span a{
+                    font-size: 1.3rem;
+                  }
+
                   #nav-link-section {
                     flex-basis: calc(100% / 3);
                     gap: 3rem;
@@ -420,7 +446,6 @@ margin: 0px;
                   }
 
                   main article .article-title-section .inner-headings {
-                    border: 0px solid #ddd;
                     height: 8svh;
                     line-height: 8svh;
                     overflow: hidden;
@@ -468,10 +493,14 @@ margin: 0px;
                     border-left: none;
                     padding: 1.5rem 1rem;
                   }
-                  
-                  #nav-logo-section > a > i {
-                    font-size: 1.2rem;
-                    margin-left: 1rem;
+
+                  #nav-logo-section {
+                    flex-basis: calc(100% / 2);
+                    justify-content: flex-start;
+                  }
+
+                  #nav-logo-section span{
+                    font-size: 1.3rem;
                   }
                   
                   #nav-mobile-section {
@@ -525,7 +554,6 @@ margin: 0px;
                   }
 
                   main article .article-title-section .inner-headings {
-                    border: 0px solid #ddd;
                     height: 8dvh;
                     overflow: hidden;
                   }
@@ -598,7 +626,7 @@ margin: 0px;
                   }
                 }
 
-
+/* page work slides */
           main > slides {
             height: 100%;
             width: 100%;
@@ -686,7 +714,7 @@ margin: 0px;
           }
 
           main > slides > .slides-description-section > p {
-            color: rgb(14, 14, 14);
+            color: var(--font-icon-color);
             font-size: 1.25em;
           }
 
@@ -701,12 +729,12 @@ margin: 0px;
           }
 
           main > slides > .slides-title-section * {
-            color: rgb(26, 26, 26);
+            color: var(--font-icon-color);
           }
 
 
           main > slides > .slides-title-section > i {
-            color: rgba(37, 37, 37, 0.75);
+            color:var(--font-icon-color);
             font-size:  4rem;
           }
 
@@ -721,7 +749,7 @@ margin: 0px;
             flex-grow: 1;
             border: none;
             outline: none;
-            color: rgba(63, 63, 63, 0.75);
+            color: var(--font-icon-color);
             font-size: 3rem;
             cursor: pointer;
             transition: 1s;
@@ -729,7 +757,7 @@ margin: 0px;
 
           main > slides > .slides-nav-section > .slides-nav-button:hover {
             touch-action: manipulation;
-            background-color: rgba(116, 116, 116, 0.397);
+            background-color: var(--button-hover-color);
             transition: 0.8s;
             cursor: crosshair;
           }

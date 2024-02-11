@@ -3,11 +3,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Rotating Text</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>test page</title>
     <link rel="stylesheet" href="test.css" />
   </head>
   <body>
-    <div class="outer-headings">
+    <!-- <div class="outer-headings">
       <h1>
         I am,
         <div class="inner-headings">
@@ -19,6 +20,36 @@
           </span>
         </div>
       </h1>
-    </div>
+    </div> -->
+    <a href="fakhrirozan.github.io">test button</a>
+    <button id="theme-toggle" class="btn" type="button">
+        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+        <span><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+    </button>
+
+    <script>
+
+        var toggle = document.getElementById("theme-toggle");
+
+        var storedTheme = localStorage.getItem('theme') || 
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        if (storedTheme)
+            document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+        toggle.onclick = function() {
+            var currentTheme = document.documentElement.getAttribute("data-theme");
+            var targetTheme = "light";
+
+            if (currentTheme === "light") {
+                targetTheme = "dark";
+            }
+
+            document.documentElement.setAttribute('data-theme', targetTheme)
+            localStorage.setItem('theme', targetTheme);
+        };
+
+
+    </script>
   </body>
 </html>

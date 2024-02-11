@@ -48,25 +48,23 @@
 
   <nav data-toggled="false" data-transitionable="false">
     <div id="nav-logo-section" class="nav-section">
-    <a  class="interactable" href="https://fakhrirozann.github.io" title="Back to front page, as expected... or if it already is then idk, refresh?">
-    <img  src="favicon.ico" min-width="25px" width="50%" height="auto">
-    </a>
+    <span><a class="interactable" href="https://fakhrirozann.github.io/"><i class="fa fa-circle"></i> RZNN</a></span>
     </div>
     <div id="nav-mobile-section">
     <div id="nav-link-section" class="nav-section">
-        <a style="padding: 10px;" class="interactable" href="https://fakhrirozann.github.io/about" title="Wait, who am i really??">ABOUT</a>
-        <a style="padding: 10px;" class="interactable" href="https://fakhrirozann.github.io/work" title="See what i've been working on">WORK</a>
+        <a style="padding: 8px;" class="interactable" href="https://fakhrirozann.github.io/about" title="Wait, who am i really??">ABOUT</a>
+        <a style="padding: 8px;" class="interactable" href="https://fakhrirozann.github.io/work" title="See what i've been working on">WORK</a>
     </div>
     <div id="nav-social-section" class="nav-section">
-        <a style="padding: 10px;" class="interactable" href="https://www.vecra.id" target="_blank" title="Check out VECRA.ID to see something else eh">
+        <a style="padding: 8px;" class="interactable" href="https://www.vecra.id" target="_blank" title="Check out VECRA.ID to see something else eh">
           <i class="fa fa-asterisk" aria-hidden="true"></i>
         </a>
-        <a style="padding: 10px;" class="interactable" href="https://www.behance.net/fakhrirozann" target="_blank" type="link" title="Give kudos to me on Behance!!!">
+        <a style="padding: 8px;" class="interactable" href="https://www.behance.net/fakhrirozann" target="_blank" type="link" title="Give kudos to me on Behance!!!">
         <i class="fa fa-behance" aria-hidden="true"></i>
         </a>    
     </div>
     <div id="nav-contact-section" class="nav-section">
-        <a style="padding: 10px;" class="interactable" href="https://www.linkedin.com/in/fakhrirozann" title="DM me on Linkedin">REACH OUT</a>
+        <a style="padding: 8px;" class="interactable" href="https://www.linkedin.com/in/fakhrirozann" title="DM me on Linkedin">REACH OUT</a>
     </div>
     </div>
     
@@ -74,16 +72,16 @@
     <span>Menu</span>
     <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
-</nav>
+  </nav>
 
 
     
     <main>
-      <article data-index="0" data-status="active">
+      <article>
         <div class="article-image-section article-section interactable" data-type="video" title="c'mon play the videooo">
         </div>
-        <div class="article-description-section article-section"  title="I dont wanna ruin the responsive layout, so here the rest ehehe... Experienced in research and development as product designer in various industries and creative works. Empowered people to get better experience through designing a great product that solves their problem and suits their needs.">
-          <p>
+        <div class="article-description-section article-section" >
+          <p title="I dont wanna ruin the responsive layout, so here the rest ehehe... Experienced in research and development as product designer in various industries and creative works. Empowered people to get better experience through designing a great product that solves their problem and suits their needs.">
             Hello there, I am Rozann. A Product Designer with experiences in Research and Development. Also interested (included but not limited to) in Visual Branding and UI/UX Design work</i></a>.
           </p>
         </div>
@@ -96,18 +94,18 @@
               3D PROTOTYPING <br />
             </span> 
           </div>
-          <i class="fa fa-certificate rotatio interactable" title="it's just a rotating icon istg... alr8 alr8 try to align this circle to the icon "></i>
+          <i id="theme-toggle" class="fa fa-certificate rotatio interactable" title="it's just a rotating icon istg... alr8 alr8 try to align this circle to the icon "></i>
         </div>
         <div class="article-nav-section article-section">
           <button class="article-nav-button" type="button" onclick="workhome()" title="Dive into my works as a designer. HIT THIS BUTTON FGS">
-            <h1 class="interactable" >EXPLORE</h1>
-<!--             <i style="color: #1a1a1a;" class="fa fa-angle-double-right" aria-hidden="true"></i></h1>
-          </button> -->
+            <h1 class="interactable" >XPLR
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i></h1>
+          </button>
         </div>
       </article>
     </main>
     <script>
-
+        // explore button
         function workhome() {window.location.replace("https://fakhrirozann.github.io/work");}
 
         let activeIndex = 0;
@@ -170,6 +168,27 @@ window.onmousemove = e => {
     icon.className = getTrailerClass(interactable.dataset.type);
   }
 }
+
+// darktheme toggle
+var toggle = document.getElementById("theme-toggle");
+
+var storedTheme = localStorage.getItem('theme') || 
+(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+toggle.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+    }
+
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
     </script>
 </body>
 </html>
