@@ -617,111 +617,104 @@
       </slides> -->
 
     <script type="text/javascript" src="script/script.js">
-              /* -- Carousel Navigation -- */
+//               /* -- Carousel Navigation -- */
 
-let activeIndex = 0;
+// let activeIndex = 0;
 
-const slides = document.getElementsByTagName("slides");
+// const slides = document.getElementsByTagName("slides");
 
-const handleLeftClick = () => {
-  const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
+// const handleLeftClick = () => {
+//   const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
   
-  const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
-        nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+//   const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
+//         nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
         
-  currentSlide.dataset.status = "after";
+//   currentSlide.dataset.status = "after";
   
-  nextSlide.dataset.status = "becoming-active-from-before";
+//   nextSlide.dataset.status = "becoming-active-from-before";
   
-  setTimeout(() => {
-    nextSlide.dataset.status = "active";
-    activeIndex = nextIndex;
-  });
-}
+//   setTimeout(() => {
+//     nextSlide.dataset.status = "active";
+//     activeIndex = nextIndex;
+//   });
+// }
 
-const handleRightClick = () => {
-  const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
+// const handleRightClick = () => {
+//   const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
   
-  const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
-        nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+//   const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
+//         nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
   
-  currentSlide.dataset.status = "before";
+//   currentSlide.dataset.status = "before";
   
-  nextSlide.dataset.status = "becoming-active-from-after";
+//   nextSlide.dataset.status = "becoming-active-from-after";
   
-  setTimeout(() => {
-    nextSlide.dataset.status = "active";
-    activeIndex = nextIndex;
-  });
-}
+//   setTimeout(() => {
+//     nextSlide.dataset.status = "active";
+//     activeIndex = nextIndex;
+//   });
+// }
 
 /* -- Mobile Nav Toggle -- */
 
-const nav = document.querySelector("nav");
+// const nav = document.querySelector("nav");
 
-const handleNavToggle = () => {  
-  nav.dataset.transitionable = "true";
+// const handleNavToggle = () => {  
+//   nav.dataset.transitionable = "true";
   
-  nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
-}
+//   nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
+// }
 
-window.matchMedia("(max-width: 800px)").onchange = e => {
-  nav.dataset.transitionable = "false";
+// window.matchMedia("(max-width: 800px)").onchange = e => {
+//   nav.dataset.transitionable = "false";
 
-  nav.dataset.toggled = "false";
-};
+//   nav.dataset.toggled = "false";
+// };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const body = document.body;
+// document.addEventListener("DOMContentLoaded", function () {
+//   const body = document.body;
 
-});
+// });
 
-// When ready...
-window.addEventListener("load",function() {
-	// Set a timeout...
-	setTimeout(function(){
-		// Hide the address bar!
-		window.scrollTo(0, 1);
-	}, 0);
-});
-
-const animateTrailer = (e, interacting) => {
-  const x = e.clientX - trailer.offsetWidth / 2,
-        y = e.clientY - trailer.offsetHeight / 2;
+// const animateTrailer = (e, interacting) => {
+//   const x = e.clientX - trailer.offsetWidth / 2,
+//         y = e.clientY - trailer.offsetHeight / 2;
   
-  const keyframes = {
-    transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
-  }
+//   const keyframes = {
+//     transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+//   }
   
-  trailer.animate(keyframes, { 
-    duration: 800, 
-    fill: "forwards" 
-  });
-}
+//   trailer.animate(keyframes, { 
+//     duration: 800, 
+//     fill: "forwards" 
+//   });
+// }
 
-const getTrailerClass = type => {
-  switch(type) {
-    case "vecra":
-      return ".";
-    default:
-      return "GO TO VECRA.ID"; 
-  }
-}
+// const getTrailerClass = type => {
+//   switch(type) {
+//     case "vecra":
+//       return ".";
+//     default:
+//       return "GO TO VECRA.ID"; 
+//   }
+// }
 
-window.onmousemove = e => {
-  const interactable = e.target.closest(".interactable"),
-        interacting = interactable !== null;
+// window.onmousemove = e => {
+//   const interactable = e.target.closest(".interactable"),
+//         interacting = interactable !== null;
   
-  const icon = document.getElementById("trailer-icon");
+//   const icon = document.getElementById("trailer-icon");
   
-  animateTrailer(e, interacting);
+//   animateTrailer(e, interacting);
   
-  trailer.dataset.type = interacting ? interactable.dataset.type : "";
+//   trailer.dataset.type = interacting ? interactable.dataset.type : "";
   
-  if(interacting) {
-    icon.className = getTrailerClass(interactable.dataset.type);
-  }
-}
+//   if(interacting) {
+//     icon.className = getTrailerClass(interactable.dataset.type);
+//   }
+// }
+
+
     </script>	
   </body>
 </html>
