@@ -1,6 +1,8 @@
                 :root {
-                  --background-color: rgb(232, 233, 226);
-                  --border-color: rgb(187, 187, 187);
+                  --background-color: rgb(192, 192, 192);
+                  --border-color: rgb(139, 139, 139);                  
+                  /* --background-color: rgb(232, 233, 226);
+                  --border-color: rgb(187, 187, 187); */
                   --highlight-color: #493528;
                   cursor: crosshair ;
                 }
@@ -24,10 +26,10 @@ body:hover > #trailer {
 #trailer {
   height: 15px;
   width: 15px;
-  background-color: white;
+  background-color: rgb(228, 53, 41);
   mix-blend-mode: difference;
   border-radius: 20px;
-  border-style: double;
+  border-style: none;
   
   position: fixed;
   left: 0px;
@@ -85,7 +87,34 @@ margin: 0px;
                   color: var(--highlight-color);
                   font-style: oblique;
                 }
-      
+                
+                /* tooltip */
+                /* [data-title]:hover:after {
+                  opacity: 1;
+                  transition: all 0.1s ease 0.5s;
+                  visibility: visible;
+              }
+
+              [data-title]:after {
+                  content: attr(data-title);
+                  background-color: #00FF00;
+                  color: #111;
+                  font-size: 150%;
+                  position: absolute;
+                  padding: 1px 5px 2px 5px;
+                  bottom: -1.6em;
+                  left: 100%;
+                  white-space: nowrap;
+                  box-shadow: 1px 1px 3px #222222;
+                  opacity: 0;
+                  border: 1px solid #111111;
+                  z-index: 99999;
+                  visibility: hidden;
+              }
+              [data-title] {
+                  position: relative;
+              } */
+
                 nav {
                   display: flex;
                   width: 100%;
@@ -460,6 +489,7 @@ margin: 0px;
                   }  
                   
                   #nav-link-section {
+                    justify-content: flex-end;
                     flex-basis: 60%;
                     flex-direction: column;
                     gap: 4rem;
@@ -555,6 +585,20 @@ margin: 0px;
                 }
                 
 
+                .rotatio{
+                  animation: rotation 15s infinite linear;
+                }
+                
+                @keyframes rotation {
+                  from {
+                    transform: rotate(0deg);
+                  }
+                  to {
+                    transform: rotate(360deg);
+                  }
+                }
+
+
           main > slides {
             height: 100%;
             width: 100%;
@@ -625,9 +669,9 @@ margin: 0px;
           }
 /* https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80 */
           main > slides:nth-child(4) > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80");
+            background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/39151e178888885.64efc521d63b5.png");
           }
-
+/* https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80 */
           main > slides > .slides-image-section {
             background-position: center;
             background-size: cover;  
