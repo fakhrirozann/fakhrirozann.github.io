@@ -4,7 +4,7 @@
                   --font-icon-color: #1c1b1f;                   
                   --highlight-color: #000000;
                   --button-hover-color: #c1c2bd;
-                  cursor: crosshair ;
+                  cursor:auto
                 }
 
                 /* theme dark or light */
@@ -18,8 +18,8 @@
                 
                 html[data-theme='dark'] {
                     --background-color: #11141d;
-                    --border-color: #967b23;
-                    --font-icon-color: #cfb354;                   
+                    --border-color: #464235;
+                    --font-icon-color: #d4ccaf;                   
                     --highlight-color: #f1d98a;
                     --button-hover-color: #272c38;
                 }
@@ -324,14 +324,14 @@
                   font-family: 'Archivo', sans-serif;
                   font-weight: 900;
                   font-size: 8svh;
-                  line-height: 8svh;
+                  line-height: 8dvh;
                   margin: 0px;
                   text-transform: uppercase;
                 }
                 
                 main article .article-title-section .inner-headings {
                   
-                  height: 8svh;
+                  height: 8dvh;
                   overflow: hidden;
                 }
                 
@@ -349,22 +349,22 @@
                     top: 0;
                   }
                   25% {
-                    top: -8svh;
+                    top: -8dvh;
                   }
                   45% {
-                    top: -8svh;
+                    top: -8dvh;
                   }
                   50% {
-                    top: -16svh;
+                    top: -16dvh;
                   }
                   70% {
-                    top: -16svh;
+                    top: -16dvh;
                   }
                   75% {
-                    top: -24svh;
+                    top: -24dvh;
                   }
                   95% {
-                    top: -24svh;
+                    top: -24dvh;
                   }
                 }
 
@@ -446,8 +446,8 @@
                   }
 
                   main article .article-title-section .inner-headings {
-                    height: 8svh;
-                    line-height: 8svh;
+                    height: 8dvh;
+                    line-height: 8dvh;
                     overflow: hidden;
                   }
                   
@@ -471,7 +471,7 @@
                   h1 {
                     font-family: 'Archivo', sans-serif;
                     font-weight: 900;
-                    font-size: 4svh;
+                    font-size: 4dvh;
                   }
                   nav {
                     justify-content: space-between;  
@@ -556,7 +556,7 @@
                     flex-basis: 50%;
                     font-family: 'Archivo', sans-serif;
                     font-weight: 900;
-                    font-size: 8dvh;
+                    font-size: 4dvh;
                     line-height: 4dvh;
                   }
 
@@ -580,29 +580,29 @@
                       top: 0;
                     }
                     25% {
-                      top: -7.6dvh;
+                      top: -8dvh;
                     }
                     45% {
-                      top: -7.6dvh;
+                      top: -8dvh;
                     }
                     50% {
-                      top: -15.5dvh;
+                      top: -16dvh;
                     }
                     70% {
-                      top: -15.5dvh;
+                      top: -16dvh;
                     }
                     75% {
-                      top: -23.5dvh;
+                      top: -24dvh;
                     }
                     95% {
-                      top: -23.5dvh;
+                      top: -24dvh;
                     }
                   }
                   
                   main > article > .article-title-section > h2 {
                     flex-basis: 70%;
                     font-size: 1.75em; 
-                    line-height: 1.5rem;
+                    line-height: 10dvh;
                   }
                   
                   main > article > .article-title-section > i {
@@ -690,7 +690,7 @@
           }
 
           main > slides:first-child > .slides-image-section {
-            background-image: url("https://media1.giphy.com/media/3oEhmIDWKdv2yZAaTm/giphy.gif?cid=ecf05e476wqzqtptma4mwsialable4rir4ct3wtwivscdzzk&ep=v1_gifs_related&rid=giphy.gif&ct=g");
+            background-image: url("https://i.auto-bild.de/mdb/large/10/charade-5ba.jpg");
 
           }
 
@@ -704,9 +704,12 @@
           }
 /* https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80 */
           main > slides:nth-child(4) > .slides-image-section {
-            background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/39151e178888885.64efc521d63b5.png");
+            background-image: url("https://media1.giphy.com/media/3oEhmIDWKdv2yZAaTm/giphy.gif?cid=ecf05e476wqzqtptma4mwsialable4rir4ct3wtwivscdzzk&ep=v1_gifs_related&rid=giphy.gif&ct=g");
           }
 /* https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80 */
+          main > slides:nth-child(5) > .slides-image-section {
+            background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/39151e178888885.64efc521d63b5.png");
+          }
           main > slides > .slides-image-section {
             background-position: center;
             background-size: cover;  
@@ -733,6 +736,7 @@
             align-items: center; 
             justify-content: space-between;
             padding: 2rem 4rem;
+            cursor: none;
           }
 
           main > slides > .slides-title-section * {
@@ -743,6 +747,7 @@
           main > slides > .slides-title-section > i {
             color:var(--font-icon-color);
             font-size:  4rem;
+            pointer-events: none;
           }
 
           main > slides > .slides-title-section > h2 {
@@ -758,7 +763,7 @@
             outline: none;
             color: var(--font-icon-color);
             font-size: 3rem;
-            cursor: pointer;
+            cursor: none;
             transition: 1s;
           }
 
@@ -766,7 +771,6 @@
             touch-action: manipulation;
             background-color: var(--button-hover-color);
             transition: 0.8s;
-            cursor: crosshair;
           }
 
           main > slides > .slides-nav-section > .slides-nav-button:nth-child(2) {
@@ -788,11 +792,12 @@
             main > slides > .slides-title-section > h2 {
               font-size: 8svh;
               font-weight: 900; 
-              line-height: 8svh;
+              line-height: 8dvh;
             }
             
             main > slides > .slides-title-section > i {
-              font-size: 3rem; 
+              font-size: 3rem;
+              pointer-events: none; 
             }
             
             main > slides > .slides-description-section,
@@ -838,7 +843,7 @@
             main > slides > .slides-title-section > h2 {
               flex-basis: 70%;
               font-size: 4svh; 
-              line-height: 4svh;
+              line-height: 4dvh;
             }
             
             main > slides > .slides-title-section > i {

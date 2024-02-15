@@ -7,12 +7,28 @@
 
               const slides = document.getElementsByTagName("slides");
               
+              const handleRightClick = () => {
+                const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
+                
+                const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
+                      nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+                      
+                currentSlide.dataset.status = "before";
+                
+                nextSlide.dataset.status = "becoming-active-from-after";
+                
+                setTimeout(() => {
+                  nextSlide.dataset.status = "active";
+                  activeIndex = nextIndex;
+                });
+              }
+              
               const handleLeftClick = () => {
                 const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
                 
                 const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
                       nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
-                      
+                
                 currentSlide.dataset.status = "after";
                 
                 nextSlide.dataset.status = "becoming-active-from-before";
@@ -23,21 +39,48 @@
                 });
               }
               
-              const handleRightClick = () => {
-                const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
+              let startX = 0;
+              let isDragging = false;
+              let slideTransitioned = false;
+              const viewportWidth = window.innerWidth;
+              const dragThresholdRatio = 0.2; // Adjust this ratio as needed
+              
+              const dragThreshold = viewportWidth * dragThresholdRatio;
+              
+              const handleDragStart = (event) => {
+                isDragging = true;
+                startX = event.clientX || event.touches[0].clientX;
+                slideTransitioned = false; // Reset flag when drag starts
+              };
+              
+              const handleDragMove = (event) => {
+                if (!isDragging || slideTransitioned) return;
                 
-                const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
-                      nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
-                
-                currentSlide.dataset.status = "before";
-                
-                nextSlide.dataset.status = "becoming-active-from-after";
-                
-                setTimeout(() => {
-                  nextSlide.dataset.status = "active";
-                  activeIndex = nextIndex;
-                });
-              }
+                const currentX = event.clientX || event.touches[0].clientX;
+                const diffX = startX - currentX;
+              
+                if (Math.abs(diffX) >= dragThreshold) {
+                  if (diffX > 0) {
+                    handleRightClick();
+                  } else {
+                    handleLeftClick();
+                  }
+                  startX = currentX; // Reset starting position for smoother dragging
+                  slideTransitioned = true; // Set flag to indicate slide transition
+                }
+              };
+              
+              const handleDragEnd = () => {
+                isDragging = false;
+              };
+              
+              document.addEventListener('mousedown', handleDragStart);
+              document.addEventListener('touchstart', handleDragStart);
+              document.addEventListener('mousemove', handleDragMove);
+              document.addEventListener('touchmove', handleDragMove);
+              document.addEventListener('mouseup', handleDragEnd);
+              document.addEventListener('touchend', handleDragEnd);
+              
               
         /* -- Mobile Nav Toggle -- */
 
@@ -79,8 +122,10 @@ const getTrailerClass = type => {
   switch(type) {
     case "video":
       return "fa fa-play";
+    case "openpage":
+      return "fa fa-hand-pointer-o";
     default:
-      return ""; 
+      return ; 
   }
 }
 
