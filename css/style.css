@@ -499,7 +499,7 @@
                   }
                 }
       
-                @media(max-width: 800px) {  
+                @media(max-width: 840px) {  
                   h1 {
                     font-family: 'Archivo', sans-serif;
                     font-weight: 900;
@@ -583,28 +583,46 @@
                   }
                   
                   main > article > .article-title-section {
-                    padding: 2rem;
+                    padding: 1rem;
                   }
 
                   main article .article-title-section h2 {
                     flex-basis: 50%;
                     font-family: 'Archivo', sans-serif;
                     font-weight: 900;
-                    font-size: 4dvh;
-                    line-height: 4dvh;
+                    font-size: 5svh;
+                    line-height: 4.1svh;
+                    width: 70%;
                   }
 
                   main article .article-title-section .inner-headings {
-                    height: 8dvh;
-                    overflow: hidden;
+                    height: 8svh;
+                    /* overflow: hidden; */
                   }
                   
+                  
+                  
+                  
+                  main > article > .article-title-section > i {
+                    font-size: 3rem;
+                    cursor: none;
+                    
+                  }
+                  
+                  main > article > .article-description-section {
+                    padding: 1rem;
+                  }
+                  
+                  main > article > .article-description-section > p {
+                    font-size: 1rem;
+                    
+                  }
                   main article .article-title-section .inner-headings span {
                     position: relative;
                     justify-self: center;
                     animation: animation 10s ease infinite;
                   }
-                  
+
                   @keyframes animation {
                     0%,
                     100% {
@@ -614,46 +632,27 @@
                       top: 0;
                     }
                     25% {
-                      top: -8dvh;
+                      top: -8svh;
                     }
                     45% {
-                      top: -8dvh;
+                      top: -8svh;
                     }
                     50% {
-                      top: -16dvh;
+                      top: -16svh;
                     }
                     70% {
-                      top: -16dvh;
+                      top: -16svh;
                     }
                     75% {
-                      top: -24dvh;
+                      top: -24.5svh;
                     }
                     95% {
-                      top: -24dvh;
+                      top: -24.5svh;
                     }
                   }
                   
-                  main > article > .article-title-section > h2 {
-                    flex-basis: 70%;
-                    font-size: 10dvh; 
-                    line-height: 10dvh;
-                  }
-                  
-                  main > article > .article-title-section > i {
-                    font-size: 2rem;
-                    cursor: none;
- 
-                  }
-                  
-                  main > article > .article-description-section {
-                    padding: 2rem;
-                  }
-                  
-                  main > article > .article-description-section > p {
-                    font-size: 1rem;
-      
-                  }
                 }
+                  
                 
 
                 .rotatio{
