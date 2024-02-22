@@ -34,438 +34,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Work | Product Designer | Research & Development | Bachelor in Product Design</title>
     <link href="css/style.css" rel="stylesheet">
-    <!-- <style>
-          :root {
-            --background-color: rgb(255, 255, 255);
-            --border-color: rgb(0, 0, 0);
-            --highlight-color: rgb(0, 182, 152);
-            --yt-color: rgb(229, 57, 53);
-            cursor: crosshair ;
-          }
-
-          body {
-            background-color: var(--background-color);
-            display: flex;
-            flex-direction: column;
-            height: 100dvh;
-            margin: 0px;
-            overflow: hidden;
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-          
-          h2{
-            font-weight: 600;
-          }
-
-          h1, h3, a, p, span {
-            font-family: "Rubik", sans-serif;
-            color: rgb(14, 14, 14);
-            margin: 0px;
-          }
-          
-          p {
-            color: rgb(14, 14, 14);
-          }
-          
-          a {
-            text-decoration: none;
-          }
-
-          a:hover {
-            color: var(--highlight-color);
-          }
-
-          nav {
-            display: flex;
-            width: 100%;
-            border-bottom: 1px solid var(--border-color);
-          }
-
-          nav .nav-section {
-            padding: 3rem 2rem;
-            display: flex;
-            gap: 1rem;
-            border-left: 1px solid var(--border-color);
-            align-items: center;
-            justify-content: center;
-          }
-
-          #nav-mobile-section {
-            display: flex;
-            flex-basis: calc(100% * (2 / 3));
-            z-index: 2;
-          }
-
-          #nav-toggle-button { 
-            touch-action: manipulation;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            border-left: 1px solid var(--border-color);
-            color: rgb(0, 0, 0);
-            cursor: pointer;
-            display: none;
-            gap: 0.8rem;
-            height: 100%;
-            justify-content: center;
-            outline: none;
-            padding: 0rem 3rem;
-            position: relative;
-            z-index: 3;
-          }
-
-          #nav-toggle-button:hover,
-          #nav-toggle-button:hover > span {
-            touch-action: manipulation;
-            color: var(--highlight-color);
-          }
-
-          #nav-toggle-button > span,
-          #nav-toggle-button > i { 
-            display: inline-block;
-            height: 1rem;
-            line-height: 1rem;
-          }
-
-          #nav-social-section,
-          #nav-contact-section {
-            flex-grow: 1;
-          }
-
-          #nav-logo-section {
-            flex-basis: calc(100% / 3);
-            justify-content: flex-start;
-          }
-
-          #nav-logo-section > a > i {
-            font-size: 2rem;
-          }
-
-          #nav-link-section {
-            flex-basis: 50%;
-            gap: 6rem; 
-          }
-
-          #nav-social-section {
-            gap: 3rem;
-          }
-
-          main {
-            flex-grow: 1;
-            position: relative;
-            overflow: hidden;
-          }
-
-          main > slides {
-            height: 100%;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: 2fr 1fr;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            transition: transform 600ms ease;  
-          }
-
-          main > slides[data-status="inactive"] {
-            transform: translateX(-100%);
-            transition: none;
-          }
-
-          main > slides[data-status="active"] {
-            transform: translateX(0%);
-          }
-
-          main > slides[data-status="before"] {
-            transform: translateX(-100%);
-          }
-
-          main > slides[data-status="after"] {
-            transform: translateX(100%);
-          }
-
-          main > slides[data-status="becoming-active-from-before"] {
-            transform: translateX(-100%);
-            transition: none;
-          }
-
-          main > slides[data-status="becoming-active-from-after"] {
-            transform: translateX(100%);
-            transition: none;
-          }
-
-          main > slides > .slides-section {
-            height: 100%;
-            display: flex;
-          }
-
-          main > slides > .slides-description-section,
-          main > slides > .slides-nav-section {
-            border-left: 1px solid var(--border-color);
-          }
-
-          main > slides > .slides-title-section,
-          main > slides > .slides-nav-section {
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-          }
-
-          main > slides:first-child > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1628270680011-41792b21de87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80auto=format&fit=crop&w=1932&q=80&auto=format&fit=crop&w=1035&q=80");
-          }
-
-          main > slides:nth-child(2) > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1663344010224-a89a22f14bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=2574&q=80");
-          }
-
-          main > slides:nth-child(3) > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80");
-          }
-
-          main > slides:nth-child(4) > .slides-image-section {
-            background-image: url("https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80");
-          }
-
-          main > slides > .slides-image-section {
-            background-position: center;
-            background-size: cover;
-          }
-
-          main > slides > .slides-description-section {
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 4rem; 
-          }
-
-          main > slides > .slides-description-section > p {
-            color: rgb(14, 14, 14);
-            font-size: 1.25em;
-          }
-
-          main > slides > .slides-description-section > p  > a:hover {
-            text-decoration: underline;
-          }
-
-          main > slides > .slides-title-section {
-            align-items: center; 
-            justify-content: space-between;
-            padding: 2rem 4rem;
-          }
-
-          main > slides > .slides-title-section * {
-            color: rgb(26, 26, 26);
-          }
-
-          main > slides > .slides-title-section > h2 {
-            flex-basis: 50%;
-            font-family: "Montserrat", sans-serif;
-            font-size: 3.5rem;
-            line-height: 3rem;
-            margin: 0px;
-            text-transform: uppercase;
-          }
-
-          main > slides > .slides-title-section > i {
-            color: rgba(37, 37, 37, 0.75);
-            font-size:  4rem;
-          }
-
-          main > slides > .slides-nav-section > .slides-nav-button {
-            touch-action: manipulation;
-            background-color: transparent;
-            flex-grow: 1;
-            border: none;
-            outline: none;
-            color: rgba(63, 63, 63, 0.75);
-            font-size: 3rem;
-            cursor: pointer;
-            transition: 1s;
-          }
-
-          main > slides > .slides-nav-section > .slides-nav-button:hover {
-            touch-action: manipulation;
-            background-color: rgba(116, 116, 116, 0.397);
-            transition: 0.8s;
-          }
-
-          main > slides > .slides-nav-section > .slides-nav-button:nth-child(2) {
-            touch-action: manipulation;
-            border-left: 0.8px solid var(--border-color);
-          }
-
-          @media(max-width: 1200px) {    
-            #nav-mobile-section {
-              flex-basis: calc(100% * 0.75);
-            }
-
-            #nav-logo-section {
-              flex-basis: calc(100% * 0.25);
-            }
-            
-            #nav-link-section {
-              flex-basis: calc(100% / 3);
-              gap: 3rem;
-            }
-
-            main {
-              overflow-y: auto;
-            }
-            
-            main > slides {
-              grid-template-columns: none;
-              grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
-              height: max(900px, 100%);
-            }
-            
-            main > slides > .slides-title-section > h2 {
-              font-size: 3rem; 
-              line-height: 2.6rem;
-            }
-            
-            main > slides > .slides-title-section > i {
-              font-size: 3rem; 
-            }
-            
-            main > slides > .slides-description-section,
-            main > slides > .slides-nav-section {
-              border-left: none;
-            }
-
-            main > slides > .slides-image-section {
-              order: 1;
-            }
-            
-            main > slides > .slides-title-section {
-              border-bottom: 1px solid var(--border-color);
-              order: 2;
-            }
-            
-            main > slides > .slides-description-section {
-              justify-content: center;
-              order: 3;
-            }
-            
-            main > slides > .slides-nav-section {
-              touch-action: manipulation;
-              border-bottom: 1px solid var(--border-color);
-              order: 4;
-            }
-          }
-
-          @media(max-width: 800px) {  
-            nav {
-              justify-content: space-between;  
-            }
-            
-            nav[data-toggled="true"] > #nav-mobile-section {  
-              transform: translateY(0%);
-            }
-
-            nav[data-toggled="true"] > #nav-toggle-button {
-              border-left: none;
-            }
-
-            nav[data-transitionable="true"] > #nav-mobile-section {
-              transition: transform 400ms ease;
-            }
-            
-            nav .nav-section {
-              border-left: none;
-              padding: 1.5rem 1rem;
-            }
-            
-            #nav-logo-section > a > i {
-              font-size: 1.5rem;
-              margin-left: 1rem;
-            }
-            
-            #nav-mobile-section {
-              background-color: var(--background-color);
-              flex-direction: column;
-              height: 100dvh;
-              width: 100vw;
-              position: fixed;
-              transform: translateY(-100%);
-            } 
-            
-            #nav-toggle-button {
-              touch-action: manipulation;
-              display: flex;
-            }  
-            
-            #nav-link-section {
-              flex-basis: 60%;
-              flex-direction: column;
-              gap: 4rem;
-            }
-            
-            #nav-link-section > a {
-              font-size: 3rem; 
-            }
-            
-            #nav-social-section > a {
-              font-size: 2rem; 
-            }  
-            
-            #nav-contact-section {
-              padding-bottom: 4rem;
-            }
-            
-            main > slides {
-              grid-template-rows: 1fr repeat(4, 0.5fr);
-              height: max(700px, 100%);
-            }
-            
-            main > slides > .slides-title-section {
-              padding: 2rem;
-            }
-            
-            main > slides > .slides-title-section > h2 {
-              flex-basis: 70%;
-              font-size: 1.75em; 
-              line-height: 1.5rem;
-            }
-            
-            main > slides > .slides-title-section > i {
-              font-size: 2rem; 
-            }
-            
-            main > slides > .slides-description-section {
-              padding: 2rem;
-            }
-            
-            main > slides > .slides-description-section > p {
-              font-size: 1rem;
-
-            }
-          }
-
-          /* -- YT link / Source link styles -- */
-
-          main > slides > .slides-description-section > p  > .source-link {
-            color: var(--highlight-color);
-            display: inline;
-          }
-
-          main > slides .yt-link,
-          main > slides .yt-link > i {
-            color: var(--yt-color);
-            display: inline;
-          }
-          /* custom mouse */
-          .info {
-            font-family: monospace;
-            position: absolute;
-            line-height: 20px;
-            font-size: 14px;
-          left: 20px;
-          top: 20px;
-        }
-    </style> -->
   </head>
   <body>
       <!-- Google Tag Manager (noscript) -->
@@ -479,28 +47,29 @@
       
       <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
-          <span><a class="interactable" href="https://fakhrirozann.github.io/">
-            <!-- <i class="fa fa-circle"></i> -->
-             ROZANN</a></span>
+            <a class="interactable" href="https://fakhrirozann.github.io/" title="back to homepage i guess"> ROZANN
+            </a>
+            <i id="theme-toggle" class="fa fa-certificate rotatio interactable" title="🌙dark or ☀️light mode is default to your system, but you can try to click/hit this to switch tho">
+            </i>
         </div>
         <div id="nav-mobile-section">
           <div id="nav-link-section" class="nav-section">
-            <a style="padding: 8px;" class="interactable" href="https://fakhrirozann.github.io/about" title="Wait, who am i really??">ABOUT</a>
+            <a style="padding: 8px;" class="interactable" href="https://fakhrirozann.github.io/about" title="Who am i really?">ABOUT</a>
             <a style="padding: 8px;" class="interactable" href="https://fakhrirozann.github.io/work" title="See what i've been working on">WORK</a>
           </div>
           <div id="nav-social-section" class="nav-section">
-            <a style="padding: 8px;" class="interactable" href="https://www.linkedin.com/in/fakhrirozann" target="_blank" type="link" title="Give kudos to me on Behance!!!">
+            <a style="padding: 8px;" class="interactable" href="https://www.linkedin.com/in/fakhrirozann" target="_blank" type="link" title="let's connect">
             <i class="fa fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a style="padding: 8px;" class="interactable" href="https://www.behance.net/fakhrirozann" target="_blank" type="link" title="Give kudos to me on Behance!!!">
+            <a style="padding: 8px;" class="interactable" href="https://www.behance.net/fakhrirozann" target="_blank" type="link" title="Go to my Behance">
               <i class="fa fa-behance" aria-hidden="true"></i>
               </a>    
-            <a style="padding: 8px;" class="interactable" href="https://vecra.id" target="_blank" title="Check out VECRA.ID to see something else eh">
+            <!-- <a style="padding: 8px;" class="interactable" href="https://vecra.id" target="_blank" title="Check out VECRA.ID to see something else eh">
             <i class="fa fa-asterisk" aria-hidden="true"></i>
-          </a>
+          </a> -->
       </div>
       <div id="nav-contact-section" class="nav-section">
-        <a style="padding: 8px;" class="interactable" href="mailto:fakhrirznn+web@gmail.com" title="Send me an email about anything(?)">REACH OUT</a>
+        <a style="padding: 8px;" class="interactable" href="mailto:fakhrirznn+web@gmail.com" title="Send me an email">REACH OUT</a>
       </div>
     </div>
     
@@ -533,7 +102,11 @@
     
     <slides data-index="1" data-status="inactive">    
         <div class="slides-image-section slides-section">
-          <!-- <img src="iidsa.png" style="width:auto;"> -->
+          <div class="video-container">
+            <video autoplay unmuted loop>
+              <source src="KENDARAAN RODA DUA ELEKTRIK MULTI ERGONOMI.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
         <div class="slides-description-section slides-section">
           <p> 
@@ -542,7 +115,6 @@
             <a href="https://skkni.kemnaker.go.id/tentang-kkni/penyetaraan-jenjang">KKNI</a> in Service Oriented Design Solution .<br>
             2022  Appreciation in Institutional Choice.   </p>
         </div>
-        <!-- SONY, ILCE-6000The afternoon rays illuminate a group of clouds as the sun approaches the horizon. -->
         
         <div class="slides-title-section slides-section interactable" data-type="openpage">
             <h2>IIDSA AWWARDS</h2>
@@ -580,7 +152,6 @@
           <slides data-index="3" data-status="inactive">
             <div class="slides-image-section slides-section" style="filter: sepia() ">
               <object data="vecralogo.svg"  style="width: 70% ; pointer-events: none; mix-blend-mode:multiply;"> </object>
-              <!-- <img clas="vecralogo" src = "vecralogo.svg" alt="vecra logo"/> -->
             </div>
             <div class="slides-description-section slides-section">
                 <p>
@@ -608,7 +179,7 @@
             Here should be the snippet of the detail from personal project page that i created for a while.</p>
         </div>
         <div class="slides-title-section slides-section interactable" data-type="openpage">
-          <h2>PERSONAL PROJECTS</h2>
+          <h2>UX/UI PROJECTS</h2>
           <i  style="transform: rotate(-45deg)" class="fa fa-arrow-right"></i>
         </div>
         <div class="slides-nav-section slides-section">
@@ -623,104 +194,6 @@
 
 
     <script type="text/javascript" src="script/script.js">
-//               /* -- Carousel Navigation -- */
-
-// let activeIndex = 0;
-
-// const slides = document.getElementsByTagName("slides");
-
-// const handleLeftClick = () => {
-//   const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
-  
-//   const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
-//         nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
-        
-//   currentSlide.dataset.status = "after";
-  
-//   nextSlide.dataset.status = "becoming-active-from-before";
-  
-//   setTimeout(() => {
-//     nextSlide.dataset.status = "active";
-//     activeIndex = nextIndex;
-//   });
-// }
-
-// const handleRightClick = () => {
-//   const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
-  
-//   const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
-//         nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
-  
-//   currentSlide.dataset.status = "before";
-  
-//   nextSlide.dataset.status = "becoming-active-from-after";
-  
-//   setTimeout(() => {
-//     nextSlide.dataset.status = "active";
-//     activeIndex = nextIndex;
-//   });
-// }
-
-/* -- Mobile Nav Toggle -- */
-
-// const nav = document.querySelector("nav");
-
-// const handleNavToggle = () => {  
-//   nav.dataset.transitionable = "true";
-  
-//   nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
-// }
-
-// window.matchMedia("(max-width: 800px)").onchange = e => {
-//   nav.dataset.transitionable = "false";
-
-//   nav.dataset.toggled = "false";
-// };
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const body = document.body;
-
-// });
-
-// const animateTrailer = (e, interacting) => {
-//   const x = e.clientX - trailer.offsetWidth / 2,
-//         y = e.clientY - trailer.offsetHeight / 2;
-  
-//   const keyframes = {
-//     transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
-//   }
-  
-//   trailer.animate(keyframes, { 
-//     duration: 800, 
-//     fill: "forwards" 
-//   });
-// }
-
-// const getTrailerClass = type => {
-//   switch(type) {
-//     case "vecra":
-//       return ".";
-//     default:
-//       return "GO TO VECRA.ID"; 
-//   }
-// }
-
-// window.onmousemove = e => {
-//   const interactable = e.target.closest(".interactable"),
-//         interacting = interactable !== null;
-  
-//   const icon = document.getElementById("trailer-icon");
-  
-//   animateTrailer(e, interacting);
-  
-//   trailer.dataset.type = interacting ? interactable.dataset.type : "";
-  
-//   if(interacting) {
-//     icon.className = getTrailerClass(interactable.dataset.type);
-//   }
-// }
-
-
     </script>	
   </body>
 </html>
