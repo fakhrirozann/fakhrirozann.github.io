@@ -5,9 +5,13 @@
                   --highlight-color: #000000;
                   --button-hover-color: #c1c2bd;
                   --trailer-color: #fff ;
+                  --text-select-color:  #fff;
+                  --bg-select-color: #1c1b1f;
                   cursor:auto
                 }
 
+                d1940b
+                
                 /* theme dark or light */
                 html[data-theme='light'] {
                   --background-color: #e8e9e2;
@@ -16,15 +20,29 @@
                   --highlight-color: #000000;
                   --button-hover-color: #c1c2bd;
                   --trailer-color: #e8e9e2 ;
+                  --text-select-color:  #ffff;
+                  --bg-select-color: #1c1b1f;
                 }
                 
                 html[data-theme='dark'] {
-                    --background-color: #11141d;
-                    --border-color: #464235;
-                    --font-icon-color: #d4ccaf;                   
-                    --highlight-color: #f1d98a;
-                    --button-hover-color: #272c38;
-                    --trailer-color: #d4ccaf ;
+                  --background-color: #11141d;
+                  --border-color: #464235;
+                  --font-icon-color: #c3b892;                   
+                  --highlight-color: #f1d98a;
+                  --button-hover-color: #272c38;
+                  --trailer-color: #d4ccaf;
+                  --text-select-color: #1c1b1f;
+                  --bg-select-color: #c3b892;
+                }
+
+                ::-moz-selection { /* Code for Firefox */
+                  color: var(--text-select-color);
+                  background: var(--bg-select-color);
+                }
+                
+                ::selection {
+                  color: var(--text-select-color);
+                  background: var(--bg-select-color);
                 }
                 /*  */
                 
@@ -68,9 +86,11 @@
                 }
 
                 #trailer-icon {
-                  font-size: 3px;
-                  line-height: 2px;
-
+                  text-align: center;
+                  font-size: 5px;
+                  line-height: 5px;
+                  left: 50%;
+                  top: 50%;
                   opacity: 0;
                   transition: opacity 400ms ease;
                 }
@@ -509,10 +529,12 @@
                   #nav-logo-section {
                     flex-basis: calc(100% / 2);
                     justify-content: flex-start;
+                    cursor: none;
                   }
                   
                   #nav-logo-section i {
                     font-size: 1.6rem;
+                    cursor: none;
                   }
 
                   #nav-mobile-section {
@@ -618,7 +640,9 @@
                   }
                   
                   main > article > .article-title-section > i {
-                    font-size: 2rem; 
+                    font-size: 2rem;
+                    cursor: none;
+ 
                   }
                   
                   main > article > .article-description-section {
@@ -633,7 +657,8 @@
                 
 
                 .rotatio{
-                  animation: rotation 15s infinite linear;
+                  cursor: none;
+                  animation: rotation 10s infinite linear;
                 }
                 
                 @keyframes rotation {
@@ -702,7 +727,7 @@
           }
 
           main > slides:first-child > .slides-image-section {
-            background-image: url("https://i.auto-bild.de/mdb/large/10/charade-5ba.jpg");
+            background-image: url("https://images-stag.jazelc.com/uploads/theautopian-m2en/cs_charade_opera_1.jpg");
 
           }
 
@@ -728,6 +753,7 @@
             justify-content: center;
             object-fit:cover ;
             overflow: hidden;
+            cursor: none;
           }
 
           main > slides > .slides-image-section .video-container {
@@ -746,47 +772,7 @@
             left: 50%;
             transform: translate(-50%,-50%);
           }
-
-          .content {
-            position: absolute;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1;
-            padding: 20px;
-            z-index: 9;
-          }
           
-          /* Style the button used to pause/play the video */
-          #myBtn {
-            width: 200px;
-            font-size: 18px;
-            padding: 10px;
-            border: none;
-            background: #000;
-            color: #fff;
-            cursor: pointer;
-          }
-          
-          #myBtn:hover {
-            background: #ddd;
-            color: black;
-          }
-
-          #muteBtn {
-            width: 200px;
-            font-size: 18px;
-            padding: 10px;
-            border: none;
-            background: #000;
-            color: #fff;
-            cursor: pointer;
-          }
-          
-          #muteBtn:hover {
-            background: #ddd;
-            color: black;
-          }
-
           main > slides > .slides-description-section {
             flex-direction: column;
             justify-content: flex-end;
@@ -823,6 +809,7 @@
           main > slides > .slides-title-section > h2 {
             font-weight: 900;
             font-size:  10dvh;
+            line-height: 9dvh;
           }
 
           main > slides > .slides-nav-section > .slides-nav-button {
@@ -861,9 +848,8 @@
             }
             
             main > slides > .slides-title-section > h2 {
-              font-size: 8dvh;
-              font-weight: 900; 
-              line-height: 8dvh;
+              font-size: 6dvh;
+              line-height: 5dvh;
             }
             
             main > slides > .slides-title-section > i {
@@ -931,3 +917,11 @@
             }
           }
 
+/* pagew about */
+
+          .mainabout {
+            height: 100%;
+            top: 50%;
+            justify-content: center;
+            text-align: center;
+          }

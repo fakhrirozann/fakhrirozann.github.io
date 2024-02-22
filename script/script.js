@@ -74,11 +74,11 @@
                 isDragging = false;
               };
               
-              document.addEventListener('mousedown', handleDragStart);
+              // document.addEventListener('mousedown', handleDragStart);
               document.addEventListener('touchstart', handleDragStart);
-              document.addEventListener('mousemove', handleDragMove);
+              // document.addEventListener('mousemove', handleDragMove);
               document.addEventListener('touchmove', handleDragMove);
-              document.addEventListener('mouseup', handleDragEnd);
+              // document.addEventListener('mouseup', handleDragEnd);
               document.addEventListener('touchend', handleDragEnd);
               
               
@@ -102,12 +102,35 @@
         const body = document.body;
 
         });
-        const trailer = document.getElementById("trailer");
+        
+              // darktheme toggle
+              var toggle = document.getElementById("theme-toggle");
+              
+              var storedTheme = localStorage.getItem('theme') || 
+              (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+              if (storedTheme)
+                  document.documentElement.setAttribute('data-theme', storedTheme)
+              
+              
+              toggle.onclick = function() {
+                  var currentTheme = document.documentElement.getAttribute("data-theme");
+                  var targetTheme = "light";
+              
+                  if (currentTheme === "light") {
+                      targetTheme = "dark";
+                  }
+              
+                  document.documentElement.setAttribute('data-theme', targetTheme)
+                  localStorage.setItem('theme', targetTheme);
+              }
 
+              
+const trailer = document.getElementById("trailer");
 const animateTrailer = (e, interacting) => {
-  const x = e.clientX - trailer.offsetWidth / 2,
+const x = e.clientX - trailer.offsetWidth / 2,
         y = e.clientY - trailer.offsetHeight / 2;
-  
+
+
   const keyframes = {
     transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
   }
@@ -124,6 +147,10 @@ const getTrailerClass = type => {
       return "fa fa-play";
     case "openpage":
       return "fa fa-hand-pointer-o";
+    case "muted":
+      return "fa fa-volume-off";
+    case "unmute":
+      return "fa fa-volume-up";
     default:
       return ; 
   }
@@ -144,26 +171,6 @@ window.onmousemove = e => {
   }
 }
 
-// darktheme toggle
-var toggle = document.getElementById("theme-toggle");
-
-var storedTheme = localStorage.getItem('theme') || 
-(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
-    document.documentElement.setAttribute('data-theme', storedTheme)
-
-
-toggle.onclick = function() {
-    var currentTheme = document.documentElement.getAttribute("data-theme");
-    var targetTheme = "light";
-
-    if (currentTheme === "light") {
-        targetTheme = "dark";
-    }
-
-    document.documentElement.setAttribute('data-theme', targetTheme)
-    localStorage.setItem('theme', targetTheme);
-};
 
 // Get the video
 var video = document.getElementById("myVideo");
@@ -184,13 +191,13 @@ function playpause() {
 
 // Function to toggle mute/unmute
 function togglemute() {
+  var trailer = document.getElementById("muteBTN"); // The trailer element
+
   if (video.muted) {
     video.muted = false;
-    muteBtn.innerHTML = "Muted";
+    trailer.dataset.type = "unmute"; // Update data-type attribute
   } else {
     video.muted = true;
-    muteBtn.innerHTML = "Unmute";
+    trailer.dataset.type = "muted"; // Update data-type attribute
   }
-  
 }
-
