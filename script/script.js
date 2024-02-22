@@ -165,3 +165,32 @@ toggle.onclick = function() {
     localStorage.setItem('theme', targetTheme);
 };
 
+// Get the video
+var video = document.getElementById("myVideo");
+// Get the button
+var btn = document.getElementById("myBtn");
+var muteBtn = document.getElementById("muteBtn");
+
+// Function to pause/play the video and change the button text
+function playpause() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+// Function to toggle mute/unmute
+function togglemute() {
+  if (video.muted) {
+    video.muted = false;
+    muteBtn.innerHTML = "Muted";
+  } else {
+    video.muted = true;
+    muteBtn.innerHTML = "Unmute";
+  }
+  
+}
+

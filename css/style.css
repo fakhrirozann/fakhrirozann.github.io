@@ -4,6 +4,7 @@
                   --font-icon-color: #1c1b1f;                   
                   --highlight-color: #000000;
                   --button-hover-color: #c1c2bd;
+                  --trailer-color: #fff ;
                   cursor:auto
                 }
 
@@ -14,6 +15,7 @@
                   --font-icon-color: #1c1b1f;                   
                   --highlight-color: #000000;
                   --button-hover-color: #c1c2bd;
+                  --trailer-color: #e8e9e2 ;
                 }
                 
                 html[data-theme='dark'] {
@@ -22,6 +24,7 @@
                     --font-icon-color: #d4ccaf;                   
                     --highlight-color: #f1d98a;
                     --button-hover-color: #272c38;
+                    --trailer-color: #d4ccaf ;
                 }
                 /*  */
                 
@@ -42,7 +45,7 @@
                 #trailer {
                   height: 15px;
                   width: 15px;
-                  background-color: rgb(255, 17, 0);
+                  background-color:var(--trailer-color);
                   mix-blend-mode: difference;
                   border-radius: 20px;
                   border-style: none;
@@ -293,11 +296,9 @@
                   border-bottom: 1px solid var(--border-color);
                 }
       
-                /*sc: UMOCA .gif shop or https://www.instagram.com/ed.lefler*/ 
                 main > article:first-child > .article-image-section {
                   background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWRpeGlhazltMHpxd3FhMmI5NHVmcm5xdWhkYXBtc2Q3cTNyamFsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRvIYDe4ILO60Ni/giphy.gif");
                 }
-                /*https://utahmoca.org/wp-content/uploads/2021/10/ello-optimized-49cfab4b.gif*/
       
                 main > article > .article-image-section {
                   background-position: center;
@@ -334,7 +335,7 @@
                   flex-basis: 50%;
                   font-family: 'Archivo', sans-serif;
                   font-weight: 900;
-                  font-size: 8svh;
+                  font-size: 8dvh;
                   line-height: 8dvh;
                   margin: 0px;
                   text-transform: uppercase;
@@ -509,11 +510,11 @@
                     flex-basis: calc(100% / 2);
                     justify-content: flex-start;
                   }
-
-                  #nav-logo-section span{
-                    font-size: 1.3rem;
-                  }
                   
+                  #nav-logo-section i {
+                    font-size: 1.6rem;
+                  }
+
                   #nav-mobile-section {
                     border-left: none;
                     background-color: var(--background-color);
@@ -612,7 +613,7 @@
                   
                   main > article > .article-title-section > h2 {
                     flex-basis: 70%;
-                    font-size: 1.75em; 
+                    font-size: 10dvh; 
                     line-height: 10dvh;
                   }
                   
@@ -708,16 +709,15 @@
           main > slides:nth-child(2) > .slides-image-section {
             background-image: url("https://fakhrirozann.github.io/iidsa.png");
           }
-          /* }https://images.unsplash.com/photo-1663344010224-a89a22f14bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=2574&q=80 */
-/* https://images.unsplash.com/photo-1628270680011-41792b21de87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80auto=format&fit=crop&w=1932&q=80&auto=format&fit=crop&w=1035&q=80 */
+
           main > slides:nth-child(3) > .slides-image-section {
             background-image: url("https://www.yankodesign.com/images/design_news/2020/09/harley-davidson-revival-is-an-electric-motorcycle-envisioned-for-young-riders/Harley-Davidson-Revival_Electric-Motorcycle_-Yanko-Design.jpg");
           }
-/* https://images.unsplash.com/photo-1692721430986-6d71f39afe48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&auto=format&fit=crop&w=927&q=80 */
+
           main > slides:nth-child(4) > .slides-image-section {
             background-image: url("https://media1.giphy.com/media/3oEhmIDWKdv2yZAaTm/giphy.gif?cid=ecf05e476wqzqtptma4mwsialable4rir4ct3wtwivscdzzk&ep=v1_gifs_related&rid=giphy.gif&ct=g");
           }
-/* https://images.unsplash.com/photo-1682686580036-b5e25932ce9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80&auto=format&fit=crop&w=2232&q=80 */
+
           main > slides:nth-child(5) > .slides-image-section {
             background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/39151e178888885.64efc521d63b5.png");
           }
@@ -734,14 +734,57 @@
             position: relative;
             top: 0;
             bottom: 0;
-            object-fit: contain;
+            object-fit: cover;
+            width: 100%;
           }
 
           main > slides > .slides-image-section .video-container video {
-            position: absolute;
+            position: relative;
+            width: 110%;
+            height: 120%;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+          }
+
+          .content {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            padding: 20px;
+            z-index: 9;
+          }
+          
+          /* Style the button used to pause/play the video */
+          #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+          }
+          
+          #myBtn:hover {
+            background: #ddd;
+            color: black;
+          }
+
+          #muteBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+          }
+          
+          #muteBtn:hover {
+            background: #ddd;
+            color: black;
           }
 
           main > slides > .slides-description-section {
@@ -779,7 +822,7 @@
 
           main > slides > .slides-title-section > h2 {
             font-weight: 900;
-            font-size:  8svh;
+            font-size:  10dvh;
           }
 
           main > slides > .slides-nav-section > .slides-nav-button {
@@ -818,7 +861,7 @@
             }
             
             main > slides > .slides-title-section > h2 {
-              font-size: 8svh;
+              font-size: 8dvh;
               font-weight: 900; 
               line-height: 8dvh;
             }
@@ -870,7 +913,7 @@
             
             main > slides > .slides-title-section > h2 {
               flex-basis: 70%;
-              font-size: 4svh; 
+              font-size: 5dvh; 
               line-height: 4dvh;
             }
             
