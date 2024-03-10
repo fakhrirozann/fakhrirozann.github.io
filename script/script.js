@@ -201,3 +201,8 @@ function togglemute() {
     trailer.dataset.type = "muted"; // Update data-type attribute
   }
 }
+
+
+var encEmail = "ZmFraHJpcnpubit3ZWJAZ21haWwuY29t";
+const form = document.getElementById("contact");
+form.setAttribute("href", "mailto:".concat(atob(encEmail)));
